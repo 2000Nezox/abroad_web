@@ -1,0 +1,21 @@
+ul.foo {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    /*padding-bottom: 40px;*/
+}
+ul.foo li {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    background-color:dodgerblue;
+    border-left:1px solid white;
+}
+ul.foo li:first-child {
+    border:none;
+}
+ul.foo li a {
+    display:block;
+    text-decoration:none;
+    color:white;
+}
