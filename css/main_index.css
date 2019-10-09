@@ -1,0 +1,58 @@
+.sub-header{
+    width: 30%;
+    height: 45px;
+}
+
+.header-1{
+    background: rgba(0,102,187,0.1) !important;
+    color: black !important;
+}
+
+.sub-header-1{
+    background: rgba(0,102,187,0.1) !important;
+    color: black !important;
+}
+
+.tablecategory{
+    margin-top: 20px;
+}
+
+table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td,th {
+    border: solid 1px #cccccc;
+    padding: 5px;
+}
+
+.tablecategory select{
+    width: 100%;
+}
+
+.box{
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 40em;
+    background: rgba(0,102,187,0.1);
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tablebody{
+    width: 95.5%;
+    margin-left: 48px;
+    margin-top: 20px;
+    background: white;
+}
+
+
+
+
+
