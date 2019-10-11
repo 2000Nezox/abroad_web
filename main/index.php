@@ -16,56 +16,60 @@
         <li class="sub-header-2"> 管理者</li>
     </ul>
 
-
-    <div class="tablecategory">
-        <table>
-<!--            ここはjsでDBから動的に習得する-->
-            <tr>
-                <th>学籍番号</th>
-                <th>学校名</th>
-                <th>担任名</th>
-                <th>学年</th>
-                <th>名前</th>
-                <th>なまえ</th>
-                <th>留学予定</th>
-            </tr>
-            <tr>
-                <td>
-                </td>
-<!--                ここはDBから動的に生成するべきかも-->
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <table class="tablecategory">
+        <thead>
+        <tr>
+            <th class="table">学籍番号</th>
+            <th>学校名</th>
+            <th>学科</th>
+            <th>担任名</th>
+            <th>学年</th>
+            <th>名前</th>
+            <th>なまえ</th>
+            <th>留学予定</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+    </table>
     <div class="box">
         <table class="tablebody">
 <!--            ここはphpでデータベースから持ってきて埋め込む-->
@@ -80,6 +84,22 @@
                 <td>サカイ　ハルカ</td>
                 <td>あり</td>
             </tr>
+            <!-- こんなかんじ -->
+<!--            --><?php
+//                for($i = 1; $i <= 30; $i++){
+//                    echo '            <tr>
+//                <td>1801017</td>
+//                <td>麻生情報ビジネス専門学校</td>
+//                <td>情報システム専攻科</td>
+//                <td>久家まさと</td>
+//                <td>2年</td>
+//                <td>酒井　春華</td>
+//                <td>サカイ　ハルカ</td>
+//                <td>あり</td>
+//            </tr>
+//            ';
+//                }
+            ?>
         </table>
     </div>
 

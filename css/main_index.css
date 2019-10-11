@@ -15,6 +15,9 @@
 
 .tablecategory{
     margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table {
@@ -23,15 +26,68 @@ table {
     margin-right: auto;
 }
 
-td,th {
+td{
     border: solid 1px #cccccc;
     padding: 5px;
+    text-align: left;
 }
 
-.tablecategory select{
+
+
+th:nth-child(1){
+    width: 6%;
+}
+th:nth-child(2){
+    width: 17%;
+}
+th:nth-child(3){
+    width: 17%;
+}
+th:nth-child(4){
+    width: 15%;
+}
+th:nth-child(5){
+    width: 4%;
+}
+th:nth-child(6){
+    width: 17%;
+}
+th:nth-child(7){
+    width: 17%;
+}
+
+td:nth-child(1){
+    width: 6%;
+}
+td:nth-child(2){
+    width: 17%;
+}
+td:nth-child(3){
+    width: 17%;
+}
+td:nth-child(4){
+    width: 15%;
+}
+td:nth-child(5){
+    width: 4%;
+}
+td:nth-child(6){
+    width: 17%;
+}
+td:nth-child(7){
+    width: 17%;
+}
+
+table select {
     width: 100%;
+    border: 1px solid #999;
+    -webkit-appearance: none;
+    border-radius: 2px;
+    /*padding: 5px 2px;*/
 }
 
+
+/* 水色の部分の設定 */
 .box{
     display: block;
     width: 95%;
@@ -45,12 +101,20 @@ td,th {
     overflow-x: hidden;
 }
 
+/* 内側の表設定 */
 .tablebody{
     width: 95.5%;
     margin-left: 48px;
     margin-top: 20px;
     background: white;
 }
+
+button{
+    
+}
+
+
+
 
 
 
