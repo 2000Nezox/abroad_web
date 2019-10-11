@@ -103,7 +103,10 @@
         </table>
     </div>
 
-    <button>CSV出力</button>
+    <div class="button-csv">
+        <button>CSV出力</button>
+    </div>
+
 
 </body>
 </html>

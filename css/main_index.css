@@ -109,8 +109,18 @@ table select {
     background: white;
 }
 
-button{
-    
+.button-csv button{
+    position: absolute;
+    right: 5%;
+    bottom: 1.7%;
+    background: #FCC324;
+    color: white;
+    width: 10em;
+    height: 4em;
+    border-radius: 25px;
+    font-size: 15px;
+    border: none;
+    box-shadow: 1px 2px 3px #555555;
 }
 
 
