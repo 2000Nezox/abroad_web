@@ -1,0 +1,80 @@
+body{
+    background-color: #0066BB;
+}
+
+h1{
+    color: white;
+
+    text-align: center;
+    height: 50px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 50px;
+
+
+}
+
+
+p{
+    color: white;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    margin-left: 660px;
+    margin-bottom: 50px;
+}
+
+.l1{
+    color: #BDBDBD;
+    font-size: 24px;
+    background: white;
+    width: 22em;
+    border-radius : 10px;
+    margin-left: 450px;
+    white-space: pre;
+}
+
+#c{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 590px;
+    border-radius : 10px;
+    cursor        : pointer;     /* カーソル   */
+    padding       : 10px 21px;   /* 余白       */
+    background    : #ffffff;     /* 背景色     */
+    color         : #000000;     /* 文字色     */
+    line-height   : 0.5em;         /* 1行の高さ  */
+    box-shadow    : 0px 4px 4px rgba(0, 0, 0, 0.25);  /* 影の設定 */
+}
+
+#r{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 60px;
+    border-radius : 10px;
+    cursor        : pointer;     /* カーソル   */
+    padding       : 10px 21px;   /* 余白       */
+    background    : #ffffff;     /* 背景色     */
+    color         : #000000;     /* 文字色     */
+    line-height   : 0.5em;         /* 1行の高さ  */
+    box-shadow    : 0px 4px 4px rgba(0, 0, 0, 0.25);  /* 影の設定 */
+}
+
+p1{
+    color: white;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    margin-left: 1250px;
+    margin-bottom: 70px;
+}
