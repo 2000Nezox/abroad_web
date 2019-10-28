@@ -120,11 +120,6 @@
                         <option value="">---</option>
                     </select>
                 </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
             </tr>
         </table>
         <div class="box">

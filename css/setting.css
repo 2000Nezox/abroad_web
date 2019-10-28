@@ -1,13 +1,13 @@
 /*左画面*/
 .sentaku{
-    color: #000000;
-    font-size: 24px;
-    text-align: center;
-    background: #E5F0F8;
-    width: 400px;
-    height: 700px;
-    white-space: pre;
-}
+     color: #000000;
+     font-size: 24px;
+     text-align: center;
+     background: #E5F0F8;
+     width: 400px;
+     height: 700px;
+     white-space: pre;
+ }
 
 /*左画面で選択されている部分*/
 #box{

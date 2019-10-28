@@ -74,51 +74,46 @@ td{
     text-align: left;
 }
 
-
-
-th:nth-child(1){
-    width: 6%;
-}
-th:nth-child(2){
-    width: 17%;
-}
-th:nth-child(3){
-    width: 17%;
-}
-th:nth-child(4){
-    width: 15%;
-}
-th:nth-child(5){
-    width: 4%;
-}
-th:nth-child(6){
-    width: 17%;
-}
-th:nth-child(7){
-    width: 17%;
-}
-
 td:nth-child(1){
-    width: 6%;
+    width: 25%;
 }
 td:nth-child(2){
-    width: 17%;
+    width: 15%;
 }
 td:nth-child(3){
-    width: 17%;
+    width: 15%;
 }
 td:nth-child(4){
     width: 15%;
 }
 td:nth-child(5){
-    width: 4%;
+    width: 15%;
 }
 td:nth-child(6){
-    width: 17%;
+    width: 15%;
 }
-td:nth-child(7){
-    width: 17%;
-}
+
+/*td:nth-child(1){*/
+/*    width: 6%;*/
+/*}*/
+/*td:nth-child(2){*/
+/*    width: 17%;*/
+/*}*/
+/*td:nth-child(3){*/
+/*    width: 17%;*/
+/*}*/
+/*td:nth-child(4){*/
+/*    width: 15%;*/
+/*}*/
+/*td:nth-child(5){*/
+/*    width: 4%;*/
+/*}*/
+/*td:nth-child(6){*/
+/*    width: 17%;*/
+/*}*/
+/*td:nth-child(7){*/
+/*    width: 17%;*/
+/*}*/
 
 table select {
     width: 100%;
@@ -145,8 +140,8 @@ table select {
 
 /* 内側の表設定 */
 .tablebody{
-    width: 95.5%;
-    margin-left: 48px;
+    width: 96.3%;
+    margin-left: 30px;
     margin-top: 20px;
     background: white;
 }
