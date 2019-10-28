@@ -9,7 +9,7 @@
 <body>
 <h1>ASO English +</h1>
 <p>by KUGA Tech</p>
-<form action="" method="post">
+<form method="post" action="main/main.php">
     <div>
         <input class="h" type="text" name="name" value="" placeholder="教職員番号">
     </div>
