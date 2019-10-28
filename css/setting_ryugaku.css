@@ -1,0 +1,15 @@
+.sentaku{
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    background: #E5F0F8;
+    width: 400px;
+    height: 700px;
+    white-space: pre;
+}
+
+#box{
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+}

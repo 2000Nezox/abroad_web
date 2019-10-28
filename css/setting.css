@@ -1,0 +1,113 @@
+/*左画面*/
+.sentaku{
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    background: #E5F0F8;
+    width: 400px;
+    height: 700px;
+    white-space: pre;
+}
+
+/*左画面で選択されている部分*/
+#box{
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+/*右画面*/
+.l1{
+    color: #BDBDBD;
+    top: 233px;
+    font-size: 24px;
+    background: white;
+    width: 42em;
+    margin-left: 400px;
+    white-space: pre;
+}
+
+#e-mail{
+    font-size: 25px;
+    color: black;
+    margin-left: 470px;
+}
+
+.h{
+    font-family: Roboto;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 50px;
+    border-radius: 15px;
+    padding: 1px 10px;
+    box-shadow: 0px 3px 3px;
+    width: 22em;
+}
+
+.l2{
+    font-size: 25px;
+    color: black;
+    margin-left: 470px;
+}
+
+#country{
+    font-family: Roboto;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 130px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 3px;
+    width: 23em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.l{
+    font-size: 25px;
+    color: black;
+    margin-left: 470px;
+}
+
+#pass{
+    font-family: Roboto;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 700px;
+    border-radius: 15px;
+    padding: 1px 10px;
+    box-shadow: 0px 3px 3px;
+    width: 22em;
+    margin-top: -55px;
+}
+
+#cpass{
+    font-family: Roboto;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 700px;
+    border-radius: 15px;
+    padding: 1px 10px;
+    box-shadow: 0px 3px 3px;
+    width: 22em;
+}
+
+#updata{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 1190px;
+    margin-top: 10px;
+    border-radius : 10px;
+    cursor        : pointer;     /* カーソル   */
+    padding       : 15px 21px;   /* 余白       */
+    background    : #FCC324;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 0.5em;         /* 1行の高さ  */
+    box-shadow    : 0px 4px 4px   /* 影の設定 */
+}
+
+.rightzentai{
+    margin-top: -700px;
+    margin-left: 20px;
+}
+
