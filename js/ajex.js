@@ -136,11 +136,31 @@ $(function(){
             .always( (data) => {
 
             });
+
+        $.ajax({
+            url:'../main/main_index.css',
+            type:'POST',
+        })
+        // Ajaxリクエストが成功した時発動
+            .done( (data) => {
+                var  i = document.getElementById('main-css');
+                console.log(data);
+                i.innerHTML = "<style>" +  data + "</style>";
+            })
+            // Ajaxリクエストが失敗した時発動
+            .fail( (data) => {
+                $('.result').html(data);
+                console.log(data);
+            })
+            // Ajaxリクエストが成功・失敗どちらでも発動
+            .always( (data) => {
+
+            });
     });
 
     $('#header-2').on('click',function(){
         $.ajax({
-            url:'../main/test.php',
+            url:'course-top.php',
             type:'POST',
         })
         // Ajaxリクエストが成功した時発動
@@ -148,6 +168,27 @@ $(function(){
                 var  i = document.getElementById('main-content');
                 console.log(i);
                 i.innerHTML = data;
+            })
+            // Ajaxリクエストが失敗した時発動
+            .fail( (data) => {
+                $('.result').html(data);
+                console.log(data);
+            })
+            // Ajaxリクエストが成功・失敗どちらでも発動
+            .always( (data) => {
+
+            });
+
+
+        $.ajax({
+            url:'../css/course-top.css',
+            type:'POST',
+        })
+        // Ajaxリクエストが成功した時発動
+            .done( (data) => {
+                var  i = document.getElementById('main-css');
+                console.log(i);
+                i.innerHTML = "<style>" +  data + "</style>";
             })
             // Ajaxリクエストが失敗した時発動
             .fail( (data) => {
