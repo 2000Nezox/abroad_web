@@ -12,6 +12,10 @@ body{
     margin-right: auto;
 }
 
+.sub-header{
+    display: none;
+}
+
 .course-input-content input {
     width: 100%;
     border:0;

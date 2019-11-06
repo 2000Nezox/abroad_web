@@ -66,25 +66,6 @@ $(function(){
             .always((data) => {
 
             })
-
-        $.ajax({
-            url:'../js/user-teacher.js',
-            type:'POST',
-        })
-        // Ajaxリクエストが成功した時発動
-            .done( (data) => {
-                var  i = document.getElementById('main-js');
-                i.innerHTML = '<script type="text/javascript">' + data + '</script>'
-            })
-            // Ajaxリクエストが失敗した時発動
-            .fail( (data) => {
-                $('.result').html(data);
-                console.log(data);
-            })
-            // Ajaxリクエストが成功・失敗どちらでも発動
-            .always( (data) => {
-
-            });
     });
 
     $('#sub-header-2').on('click', function () {
@@ -130,24 +111,6 @@ $(function(){
 
             })
 
-        $.ajax({
-            url:'../js/user-teacher.js',
-            type:'POST',
-        })
-        // Ajaxリクエストが成功した時発動
-            .done( (data) => {
-                var  i = document.getElementById('main-js');
-                i.innerHTML = '<script type="text/javascript">' + data + '</script>'
-            })
-            // Ajaxリクエストが失敗した時発動
-            .fail( (data) => {
-                $('.result').html(data);
-                console.log(data);
-            })
-            // Ajaxリクエストが成功・失敗どちらでも発動
-            .always( (data) => {
-
-            });
     });
 
     $('#header-1').on('click',function(){

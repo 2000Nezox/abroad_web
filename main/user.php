@@ -1,8 +1,4 @@
 <div id="main-user">
-    <ul class="main-header sub-header">
-        <li id="sub-header-1">学生</li>
-        <li id="sub-header-2">管理者</li>
-    </ul>
     <table class="tablecategory">
         <thead>
         <tr>

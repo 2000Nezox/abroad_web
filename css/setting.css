@@ -9,6 +9,10 @@
      white-space: pre;
  }
 
+.sub-header{
+    display: none;
+}
+
 /*左画面で選択されている部分*/
 #box{
     background-color: white;

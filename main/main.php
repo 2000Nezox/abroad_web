@@ -11,6 +11,10 @@
 </head>
 <body>
 <?php include ("../sharedfile/header.php");?>
+<ul class="main-header sub-header">
+    <li id="sub-header-1">学生</li>
+    <li id="sub-header-2">管理者</li>
+</ul>
 <div id="main-content"><?php include ("../main/user.php")?></div>
 <div id="main-css"></div>
 <div id="main-js"></div>
