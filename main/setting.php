@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/setting.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/header.js"></script>
+    <!--    <script src="../js/ajex.js"></script>-->
+</head>
+<body>
+<?php include ("../sharedfile/header.php");?>
+<ul class="main-header sub-header">
+    <li id="sub-header-1">学生</li>
+    <li id="sub-header-2">管理者</li>
+</ul>
 <div id="setting">
     <div class="sentaku">
         <br>
@@ -51,3 +69,5 @@
             <input id="updata" type="submit" name ="check" value = "更新">
     </div>
 </div>
+</body>
+</html>

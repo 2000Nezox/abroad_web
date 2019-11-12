@@ -5,11 +5,11 @@
     </div>
     <nav>
         <ul class="main-header">
-            <li id="header-1">ユーザー</li>
-            <li id="header-2">講座</li>
-            <li id="header-3">通知</li>
-            <li id="header-4">面談</li>
-            <li id="header-5">設定</li>
+            <li id="header-1"><a href="../main/main.php">ユーザー</a></li>
+            <li id="header-2"><a href="../main/course-top.php">講座</a></li>
+            <li id="header-3"><a href="../main/notification.php">通知</a></li>
+            <li id="header-4"><a href="../main/interview.php">面談</a></li>
+            <li id="header-5"><a href="../main/setting.php">設定</a></li>
         </ul>
     </nav>
 

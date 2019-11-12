@@ -3,10 +3,14 @@ html{
     height:100%;
 }
 
-/*body{*/
-/*    overflow: hidden;*/
-/*    height: 100%;*/
-/*}*/
+body{
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+#main-user{
+    height: 78%;
+}
 
 .sub-header{
     width: 20%;
@@ -27,6 +31,22 @@ html{
 
 #sub-header-1 a{
     color: black !important;
+}
+
+.title{
+    width: 90%;
+    height: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.title dt{
+    font-size: 30px;
+}
+
+.title dd{
+    margin-top: 10px;
 }
 
 .tablecategory{
@@ -94,6 +114,34 @@ td:nth-child(7){
     width: 17%;
 }
 
+.tablebody td:nth-child(1){
+    width: 1%;
+}
+
+.tablebody td:nth-child(2){
+    width: 6%;
+}
+.tablebody td:nth-child(3){
+    width: 16.5%;
+}
+.tablebody td:nth-child(4){
+    width: 16.8%;
+}
+.tablebody td:nth-child(5){
+    width: 14.7%;
+}
+.tablebody td:nth-child(6){
+    width: 4%;
+}
+.tablebody td:nth-child(7){
+    width: 16.7%;
+}
+.tablebody td:nth-child(8){
+    width: 16.7%;
+}
+
+
+
 table select {
     width: 100%;
     border: 1px solid #999;
@@ -111,17 +159,18 @@ table select {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    height: 40em;
+    height: 32em;
     background: rgba(0,102,187,0.1);
     border-radius: 20px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
+
 /* 内側の表設定 */
 .tablebody{
-    width: 95.5%;
-    margin-left: 48px;
+    width: 97.5%;
+    margin-left: 15px;
     margin-top: 20px;
     background: white;
 }

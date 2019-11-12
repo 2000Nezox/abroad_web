@@ -15,23 +15,25 @@ html{
 
 #header-1{
     background: rgba(0,102,187,0.1) !important;
+
 }
 
 #header-1 a{
     color: black !important;
 }
 
-#sub-header-1 {
-    background: rgba(0, 102, 187, 0.1) !important;
+#sub-header-2{
+    background: rgba(0,102,187,0.1) !important;
+
 }
 
-#sub-header-1 a{
+#sub-header-2 a{
     color: black !important;
 }
 
 .tablecategory{
     margin-top: 20px;
-    width: 90%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -51,48 +53,32 @@ td{
 
 
 th:nth-child(1){
-    width: 6%;
+    width: 10%;
 }
 th:nth-child(2){
-    width: 17%;
+    width: 25%;
 }
 th:nth-child(3){
-    width: 17%;
+    width: 25%;
 }
 th:nth-child(4){
-    width: 15%;
-}
-th:nth-child(5){
-    width: 4%;
-}
-th:nth-child(6){
-    width: 17%;
-}
-th:nth-child(7){
-    width: 17%;
+    width: 40%;
 }
 
+
 td:nth-child(1){
-    width: 6%;
+    width: 10%;
 }
 td:nth-child(2){
-    width: 17%;
+    width: 25%;
 }
 td:nth-child(3){
-    width: 17%;
+    width: 25%;
 }
 td:nth-child(4){
-    width: 15%;
+    width: 40%;
 }
-td:nth-child(5){
-    width: 4%;
-}
-td:nth-child(6){
-    width: 17%;
-}
-td:nth-child(7){
-    width: 17%;
-}
+
 
 table select {
     width: 100%;
@@ -120,8 +106,8 @@ table select {
 
 /* 内側の表設定 */
 .tablebody{
-    width: 95.5%;
-    margin-left: 48px;
+    width: 74.6%;
+    margin-left: 13.1%;
     margin-top: 20px;
     background: white;
 }

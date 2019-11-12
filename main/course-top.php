@@ -1,17 +1,17 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="ja">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>$Title$</title>-->
-<!--    <link rel="stylesheet" href="../css/reset.css">-->
-<!--    <link rel="stylesheet" href="../css/header.css">-->
-<!--    <link rel="stylesheet" href="../css/course-top.css">-->
-<!--    <script src="../js/jquery-3.4.1.min.js"></script>-->
-<!--    <script src="../js/header.js"></script>-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/course-top.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/header.js"></script>
 <!--    <script src="../js/ajex.js"></script>-->
-<!--</head>-->
-<!--<body>-->
-
+</head>
+<body>
+<?php include ("../sharedfile/header.php");?>
 <div id="main-content">
     <div class="course-input">
         <dl>
@@ -155,10 +155,7 @@
     </div>
 
 </div>
-<!--<div id="main-css">-->
-<!---->
-<!--</div>-->
-<!--<div id="main-js"></div>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
+
+</body>
+</html>
+
