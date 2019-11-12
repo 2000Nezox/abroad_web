@@ -1,40 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/teacher.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/header.js"></script>
+    <!--    <script src="../js/ajex.js"></script>-->
+</head>
+<body>
+<?php include ("../sharedfile/header.php");?>
+<ul class="main-header sub-header">
+    <li id="sub-header-1"><a href="main.php">ユーザー</a></li>
+    <li id="sub-header-2"><a href="teacher.php">管理者</a></li>
+</ul>
 <div id="main-user">
     <table class="tablecategory">
         <thead>
         <tr>
-            <th class="table">学籍番号</th>
+            <th>教員番号</th>
             <th>学校名</th>
-            <th>学科</th>
-            <th>担任名</th>
-            <th>学年</th>
-            <th>名前</th>
-            <th>なまえ</th>
-            <th>留学予定</th>
+            <th>姓　名</th>
+            <th>担当国名</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td></td>
-            <td>
-                <select>
-                    <option value="">---</option>
-                </select>
-            </td>
-            <td>
-                <select>
-                    <option value="">---</option>
-                </select>
-            </td>
-            <td>
-                <select>
-                    <option value="">---</option>
-                </select>
-            </td>
-            <td>
-                <select>
-                    <option value="">---</option>
-                </select>
-            </td>
             <td>
                 <select>
                     <option value="">---</option>
@@ -62,10 +56,7 @@
                 <td>麻生情報ビジネス専門学校</td>
                 <td>情報システム専攻科</td>
                 <td>久家まさと</td>
-                <td>2年</td>
-                <td>酒井　春華</td>
-                <td>サカイ　ハルカ</td>
-                <td>あり</td>
+
             </tr>
             <!-- こんなかんじ -->
             <?php
@@ -90,3 +81,7 @@
         <button>CSV出力</button>
     </div>
 </div>
+
+
+</body>
+</html>
