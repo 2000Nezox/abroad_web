@@ -13,7 +13,7 @@
 <body>
 <?php include ("../sharedfile/header.php");?>
 <ul class="main-header sub-header">
-    <li id="sub-header-1"><a href="main.php">ユーザー</a></li>
+    <li id="sub-header-1"><a href="user.php">ユーザー</a></li>
     <li id="sub-header-2"><a href="teacher.php">管理者</a></li>
 </ul>
 <div id="main-user">

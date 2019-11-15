@@ -1,6 +1,15 @@
 body{
     width: 100%;
 }
+
+#header-2{
+    background: rgba(0,102,187,0.1) !important;
+}
+
+#header-2 a{
+    color: black !important;
+}
+
 .course-input{
     width: 35%;
     float: left;

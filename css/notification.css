@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-/*#main-content{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-=======
+
 html{
     min-width: 1500px;
     height:100%;
+    width: 100%;
 }
 
-/*body{*/
-/*    overflow: hidden;*/
-/*    height: 100%;*/
-/*}*/
+body{
+    width: 100%;
+    height: 100%;
+}
 #header-3{
     background: rgba(0,102,187,0.1) !important;
 }
@@ -21,7 +17,7 @@ html{
     color: black !important;
 }
 
->>>>>>> origin/master
+/*>>>>>>> origin/master*/
 #send-content{
     margin-top: 50px;
     width: 50%;
@@ -83,11 +79,11 @@ html{
 
 button{
     position: relative;
-<<<<<<< HEAD
-    left: 85%;
-=======
+/*<<<<<<< HEAD*/
+/*    left: 85%;*/
+/*=======*/
     left: 50%;
->>>>>>> origin/master
+/*>>>>>>> origin/master*/
     top: 10px;
     background: #FCC324;
     color: white;
@@ -103,8 +99,8 @@ button{
     clear: both;
 }
 
-<<<<<<< HEAD
-=======
+/*<<<<<<< HEAD*/
+/*=======*/
 .table1{
     margin-top: 100px;
     width: 97.5%;
@@ -163,7 +159,7 @@ td{
     overflow-y: scroll;
 }
 
->>>>>>> origin/master
+/*>>>>>>> origin/master*/
 #send-img{
     margin-top: 50px;
     width: 50%;
