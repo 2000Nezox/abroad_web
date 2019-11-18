@@ -1,7 +1,7 @@
 /*左画面*/
-.sentaku{
-    float: left;
-}
+/*.sentaku{*/
+/*    float: left;*/
+/*}*/
 
 #header-5{
     background: rgba(0,102,187,0.1) !important;
@@ -29,6 +29,86 @@
 }
 .setting-display{
     margin-top: 50px;
+}
+
+.setting-display dt {
+    color: #cccccc;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.setting-display dd{
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.setting-input{
+    margin-top: 40px;
+}
+
+.setting-input dl{
+    width: 100%;
+}
+
+.setting-input dt{
+    width: 30%;
+    float: left;
+    clear: left;
+    font-size: 20px;
+}
+
+.setting-input dd{
+    width: 70%;
+    float: left;
+}
+
+.setting-input input{
+    margin:0 0 30px;
+    border-radius:15px;
+    padding:10px;
+    /*font-size:1.1em;*/
+    /*font-family:Arial, sans-serif;*/
+    border:solid 1px #ccc;
+    font-size: 1.2em;
+    /*width:400px;*/
+}
+
+.setting-input input:nth-child(1){
+    float: left;
+    width: 100%;
+}
+.setting-input input:nth-child(2){
+    width: 100%;
+    clear: left;
+}
+
+
+/*.setting-input dt{*/
+/*    float: left;*/
+/*    font-size: 20px;*/
+/*}*/
+
+/*.setting-input dd{*/
+/*    float: left;*/
+/*}*/
+
+/*.setting-input input{*/
+
+
+/*}*/
+
+button{
+    float: none;
+    position: relative;
+    left: 81%;
+    top: 10px;
+    background: #FCC324;
+    color: white;
+    width: 8em;
+    height: 3em;
+    border-radius: 25px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 1px 2px 3px #555555;
 }
 
 

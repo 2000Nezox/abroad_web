@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>設定</title>
@@ -11,80 +11,113 @@
     <script src="../js/header.js"></script>
 </head>
 <body>
-<?php include('../sharedfile/header.php') ?>
-<?php include ('../sharedfile/setting_list.php') ?>
+    <?php include('../sharedfile/header.php') ?>
+    <?php include ('../sharedfile/setting_list.php') ?>
 
-<div class="rightzentai">
-    <div class="l1">
-        <th><select name="country" id="country">
-                <option value="">フィリピン</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-            </select></th>
-        <br>
-        <table border="1" class="list">
+    <div class="course-list" >
+        <table class="tablecategory">
+            <!--            <thead>-->
+            <!--            <tr>-->
+            <!--                <th class="table">学籍番号</th>-->
+            <!--                <th>開催名</th>-->
+            <!--                <th>開催日</th>-->
+            <!--                <th>開催時</th>-->
+            <!--                <th>開催場所</th>-->
+            <!--                <th>カテゴリ</th>-->
+            <!--                <th>作成者</th>-->
+            <!--            </tr>-->
+            <!--            </thead>-->
+
             <tr>
-                <td id="yoko1">留学先学校名</td>
-                <td id="yoko2">コース名</td>
-                <td id="yoko3">期間</td>
-                <td id="yoko4">参考金額(万)</td>
-                <td id="yoko5">備考</td>
+                <td>
+                    <select name="refine">
+                        <option value="">---</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select>
+                        <option value="">---</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="">---</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="">---</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="">---</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="">---</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="">---</option>
+                    </select>
+                </td>
             </tr>
         </table>
-
-        <!-- DB入力欄仮 -->
-        <div id="box1">
-        <table border="1" class="list2">
-            <tr>
-                <td id="yoko6">IDEAセブ</td>
-                <td id="yoko7">ー</td>
-                <td id="yoko8">2週間</td>
-                <td id="yoko9">16</td>
-                <td id="yoko10">URL等を入力</td>
-            </tr>
-        </table>
+        <div class="box">
+            <table class="tablebody">
+                <!-- ここはphpでデータベースから持ってきて埋め込む-->
+                <!-- 以下イメージ、上記の機能が完了後は削除-->
+                <tr>
+                    <td>スポーツEnglish</td>
+                    <td>2019/09/06</td>
+                    <td>17:00~18:00</td>
+                    <td>1155教室</td>
+                    <td>イベント</td>
+                    <td>水本</td>
+                </tr>
+                <!-- こんなかんじ -->
+                <?php
+                //                for($i = 1; $i <= 30; $i++){
+                //                    echo '            <tr>
+                //                <td>1801017</td>
+                //                <td>麻生情報ビジネス専門学校</td>
+                //                <td>情報システム専攻科</td>
+                //                <td>久家まさと</td>
+                //                <td>2年</td>
+                //                <td>酒井　春華</td>
+                //                <td>サカイ　ハルカ</td>
+                //                <td>あり</td>
+                //            </tr>
+                //            ';
+                //                }
+                ?>
+            </table>
         </div>
-        <!-- 右画面下 -->
-        <div id="box2">
-        <th><select name="country" id="country2">
-                <option value="">国名</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-            </select></th>
-        <div >
-            <input class="koumoku" type="text" name="pass" value="" placeholder="学校名">
-
-            <input class="koumoku" id="koumoku1" type="text" name="pass" value="" placeholder="コース名">
-
-            <th><select name="period" id="period">
-                    <option value="">期間</option>
-                    <option value="">--</option>
-                    <option value="">--</option>
-                    <option value="">--</option>
-                    <option value="">--</option>
-                    <option value="">--</option>
-                    <option value="">--</option>
-                    <option value="">--</option>
-                </select></th>
-                <input id="koumoku2" type="text" name="pass" value="" placeholder="参考費用"><h>万円</h>
-            <input id="koumoku3" type="text" name="pass" value="" placeholder="備考">
-            <input id="delete" type="submit" name ="delete" value = "削除">
-            <input id="add" type="submit" name ="add" value = "追加">
-        </div>
-
+        <div class="setting-course-input">
+            <div class="setting-course-input1">
+                <div>
+                    <ul>
+                        <li><select></select></li>
+                        <li><input type="text"></li>
+                        <li><input type="text"></li>
+                        <li><select name="" id=""></select></li>
+                        <li><input type="text"><p>万円</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="setting-course-input2">
+                <textarea></textarea>
+                <button class="button1">削除</button>
+                <button class="button2">追加</button>
+            </div>
         </div>
     </div>
-</div>
+
 </body>
 </html>
 
