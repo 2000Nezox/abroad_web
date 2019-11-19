@@ -15,89 +15,83 @@
     <?php include ('../sharedfile/setting_list.php') ?>
 
     <div class="course-list" >
-        <table class="tablecategory">
-            <!--            <thead>-->
-            <!--            <tr>-->
-            <!--                <th class="table">学籍番号</th>-->
-            <!--                <th>開催名</th>-->
-            <!--                <th>開催日</th>-->
-            <!--                <th>開催時</th>-->
-            <!--                <th>開催場所</th>-->
-            <!--                <th>カテゴリ</th>-->
-            <!--                <th>作成者</th>-->
-            <!--            </tr>-->
-            <!--            </thead>-->
+            <table class="tablecategory">
+                <!--            <thead>-->
+                <!--            <tr>-->
+                <!--                <th class="table">学籍番号</th>-->
+                <!--                <th>開催名</th>-->
+                <!--                <th>開催日</th>-->
+                <!--                <th>開催時</th>-->
+                <!--                <th>開催場所</th>-->
+                <!--                <th>カテゴリ</th>-->
+                <!--                <th>作成者</th>-->
+                <!--            </tr>-->
+                <!--            </thead>-->
 
-            <tr>
-                <td>
-                    <select name="refine">
-                        <option value="">---</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-                <td>
-                    <select>
-                        <option value="">---</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <div class="box">
-            <table class="tablebody">
-                <!-- ここはphpでデータベースから持ってきて埋め込む-->
-                <!-- 以下イメージ、上記の機能が完了後は削除-->
                 <tr>
-                    <td>スポーツEnglish</td>
-                    <td>2019/09/06</td>
-                    <td>17:00~18:00</td>
-                    <td>1155教室</td>
-                    <td>イベント</td>
-                    <td>水本</td>
+                    <td>
+                        <select name="refine">
+                            <option value="">---</option>
+                        </select>
+                    </td>
                 </tr>
-                <!-- こんなかんじ -->
-                <?php
-                //                for($i = 1; $i <= 30; $i++){
-                //                    echo '            <tr>
-                //                <td>1801017</td>
-                //                <td>麻生情報ビジネス専門学校</td>
-                //                <td>情報システム専攻科</td>
-                //                <td>久家まさと</td>
-                //                <td>2年</td>
-                //                <td>酒井　春華</td>
-                //                <td>サカイ　ハルカ</td>
-                //                <td>あり</td>
-                //            </tr>
-                //            ';
-                //                }
-                ?>
+                <tr>
+                    <td>
+                        <select>
+                            <option value="">---</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="">---</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="">---</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="">---</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value="">---</option>
+                        </select>
+                    </td>
+                </tr>
             </table>
-        </div>
+            <div class="box">
+                <table class="tablebody">
+                    <!-- ここはphpでデータベースから持ってきて埋め込む-->
+                    <!-- 以下イメージ、上記の機能が完了後は削除-->
+                    <tr>
+                        <td>スポーツEnglish</td>
+                        <td>2019/09/06</td>
+                        <td>17:00~18:00</td>
+                        <td>1155教室</td>
+                        <td>イベント</td>
+                    </tr>
+                    <!-- こんなかんじ -->
+                    <?php
+                    //                for($i = 1; $i <= 30; $i++){
+                    //                    echo '            <tr>
+                    //                <td>1801017</td>
+                    //                <td>麻生情報ビジネス専門学校</td>
+                    //                <td>情報システム専攻科</td>
+                    //                <td>久家まさと</td>
+                    //                <td>2年</td>
+                    //                <td>酒井　春華</td>
+                    //                <td>サカイ　ハルカ</td>
+                    //                <td>あり</td>
+                    //            </tr>
+                    //            ';
+                    //                }
+                    ?>
+                </table>
+            </div>
         <div class="setting-course-input">
             <div class="setting-course-input1">
                 <div>

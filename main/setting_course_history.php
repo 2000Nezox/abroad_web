@@ -13,45 +13,93 @@
 <body>
 <?php include('../sharedfile/header.php') ?>
 <?php include ('../sharedfile/setting_list.php') ?>
+<div class="setting-right">
+    <table class="tablecategory">
+        <!--            <thead>-->
+        <!--            <tr>-->
+        <!--                <th class="table">学籍番号</th>-->
+        <!--                <th>開催名</th>-->
+        <!--                <th>開催日</th>-->
+        <!--                <th>開催時</th>-->
+        <!--                <th>開催場所</th>-->
+        <!--                <th>カテゴリ</th>-->
+        <!--                <th>作成者</th>-->
+        <!--            </tr>-->
+        <!--            </thead>-->
 
-<div class="rightzentai">
-    <div class="l1">
-        <th><select name="country" id="country">
-                <option value="">イベント</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-                <option value="">--</option>
-            </select></th>
-        <br>
-        <table border="1" class="list">
+        <tr>
+            <td>
+                <select name="refine">
+                    <option value="">---</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option value="">---</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <div class="box">
+        <table class="tablebody">
+            <!-- ここはphpでデータベースから持ってきて埋め込む-->
+            <!-- 以下イメージ、上記の機能が完了後は削除-->
             <tr>
-                <td id="yoko1">講座名</td>
-                <td id="yoko2">開催日</td>
-                <td id="yoko3">開催時</td>
-                <td id="yoko4">開催場所</td>
-                <td id="yoko5">詳細</td>
-                <td id="yoko6">作成者</td>
+                <td>スポーツEnglish</td>
+                <td>2019/09/06</td>
+                <td>17:00~18:00</td>
+                <td>1155教室</td>
+                <td>イベント</td>
+                <td>こここｋ</td>
             </tr>
+            <!-- こんなかんじ -->
+            <?php
+            //                for($i = 1; $i <= 30; $i++){
+            //                    echo '            <tr>
+            //                <td>1801017</td>
+            //                <td>麻生情報ビジネス専門学校</td>
+            //                <td>情報システム専攻科</td>
+            //                <td>久家まさと</td>
+            //                <td>2年</td>
+            //                <td>酒井　春華</td>
+            //                <td>サカイ　ハルカ</td>
+            //                <td>あり</td>
+            //            </tr>
+            //            ';
+            //                }
+            ?>
         </table>
+    </div>
+    <button>CSV出力</button>
+</div>
 
-        <!-- DB表示仮 -->
-        <div id="box1">
-            <table border="1" class="list2">
-                <tr>
-                    <td>スポーツEnglish</td>
-                    <td>2019/09/06</td>
-                    <td>17:00~18:00</td>
-                    <td>1155教室</td>
-                    <td>詳細表示されます</td>
-                    <td>水本**</td>
-                </tr>
-            </table>
-        </div>
-        <input id="output" type="submit" name ="output" value = "CSV出力">
 </div>
 </body>
 </html>

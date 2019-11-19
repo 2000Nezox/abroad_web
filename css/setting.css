@@ -1,8 +1,11 @@
-/*左画面*/
-/*.sentaku{*/
-/*    float: left;*/
-/*}*/
+html{
+    min-width: 1500px;
+    height:100%;
+}
 
+body{
+    width: 100%;
+}
 #header-5{
     background: rgba(0,102,187,0.1) !important;
 }
@@ -16,6 +19,7 @@
     background-color: white;
     border-radius: 10px;
 }
+
 
 .top-right{
     float: left;

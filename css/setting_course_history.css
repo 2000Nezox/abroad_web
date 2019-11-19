@@ -1,115 +1,133 @@
-/*左画面*/
-.sentaku{
-    color: #000000;
-    font-size: 24px;
-    text-align: center;
-    background: #E5F0F8;
-    width: 400px;
-    height: 700px;
-    white-space: pre;
+html{
+    min-width: 1500px;
+
 }
 
-/*左画面で選択されている部分*/
-#box{
+#header-5{
+    background: rgba(0,102,187,0.1) !important;
+}
+
+#header-5 a{
+    color: black !important;
+}
+
+#sub-heder4{
+    padding: 10px 5px;
     background-color: white;
     border-radius: 10px;
-    padding: 3% 5%;
 }
 
-/*右画面*/
-.rightzentai{
-    margin-top: -45.3%;
-    margin-left: 1%;
+.setting-right{
+    float: left;
+    width: 72%;
+    margin-left: 1.5%;
 }
 
-.l1{
-    font-size: 24px;
-    background: white;
-    width: 30em;
-    margin-left: 27%;
-    white-space: pre;
+.tablecategory{
+    margin-top: 20px;
+    width: 90.3%;
+    margin-left: 65px
 }
 
-#country{
-    font-family: Roboto;
-    font-size: 100%;
-    text-align: left;
-    margin-top: -6%;
-    margin-bottom: 3%;
-    border-radius: 15%;
-    width: 35%;
-    height: 2.5REM;
-}
-
-/* 入力一覧 */
-.list{
-    color: black;
-    margin-left: 8.8%;
-    margin-top: -11%;
-    width: 130%;
-}
-
-#yoko1{
-    width: 18.9%;
-}
-
-#yoko2{
-    width: 15.9%;
-}
-
-#yoko3{
-    width: 16.1%;
-}
-
-#yoko4{
-    width: 12.5%;
-}
-
-#yoko5{
-    width: 20%;
-}
-
-#yoko6{
-    width: 9.4%;
-}
-
-/* DB表示 */
-.list2{
-    color: black;
-    background-color: white;
-    margin-left: 1.7%;
-    margin-top: -1%;
-    width: 96.3%;
+table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td{
-    table-layout: fixed;
+    border: solid 1px #cccccc;
+    padding: 5px;
+    text-align: left;
+}
+
+td:nth-child(1){
+    width: 20%;
+}
+td:nth-child(2){
+    width: 15%;
+}
+td:nth-child(3){
+    width: 15%;
+}
+td:nth-child(4){
+    width: 15%;
+}
+td:nth-child(5){
+    width: 20%;
+}
+td:nth-child(6){
+    width: 15%;
 }
 
 
 
-/* DB入力バックカラー */
-#box1{
-    background-color: #E5F0F8;
-    margin-left: 6.5%;
-    margin-top: -8%;
-    padding-bottom: 40%;
-    width: 135%;
-    border-radius: 10px;
+/*td:nth-child(1){*/
+/*    width: 6%;*/
+/*}*/
+/*td:nth-child(2){*/
+/*    width: 17%;*/
+/*}*/
+/*td:nth-child(3){*/
+/*    width: 17%;*/
+/*}*/
+/*td:nth-child(4){*/
+/*    width: 15%;*/
+/*}*/
+/*td:nth-child(5){*/
+/*    width: 4%;*/
+/*}*/
+/*td:nth-child(6){*/
+/*    width: 17%;*/
+/*}*/
+/*td:nth-child(7){*/
+/*    width: 17%;*/
+/*}*/
+
+table select {
+    width: 100%;
+    border: 1px solid #999;
+    -webkit-appearance: none;
+    border-radius: 2px;
+    /*padding: 5px 2px;*/
 }
 
-#output{
-    font-size: 20px;
-    text-align: center;
-    margin-left: 115%;
-    margin-top: 3%;
-    border-radius : 10px;
-    cursor        : pointer;     /* カーソル   */
-    padding       : 15px 21px;   /* 余白       */
-    background: #FCC324;     /* 背景色     */
-    color         : #ffffff;     /* 文字色     */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    line-height   : 0.5em;         /* 1行の高さ  */
+
+/* 水色の部分の設定 */
+.box{
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 40em;
+    background: rgba(0,102,187,0.1);
+    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* 内側の表設定 */
+.tablebody{
+    width: 96.3%;
+    margin-left: 30px;
+    margin-top: 20px;
+    background: white;
+}
+
+button{
+    color: white;
+    position: relative;
+    /*bottom: 5%;*/
+    background: orange;
+    width: 10em;
+    height: 3em;
+    border-radius: 25px;
+    font-size: 15px;
+    border: none;
+    box-shadow: 1px 2px 3px #555555;
+    top: 20px;
+    left: 86.5%;
 }
 
 
