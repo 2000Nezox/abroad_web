@@ -1,138 +1,92 @@
 body{
+    min-width: 1500px;
     background-color: #0066BB;
+    color: white;
+    overflow-x: hidden;
 }
+
+.registration{
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.registration1{
+    text-align: center;
+}
+
+/*dl{*/
+/*    height: 100%;*/
+/*}*/
 
 h1{
-    color: white;
-
-    text-align: center;
-    height: 50px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    margin-top: 50px;
-
-
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
 
-
-p{
-    color: white;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 28px;
-    margin-left: 660px;
-    margin-bottom: 40px;
+dt{
+    float: left;
+    clear: left;
+    width: 150px;
+    margin-top: 28px;
+}
+dd{
+    float: left;
+    width: 70%;
+    margin-top: 20px;
 }
 
-.h{
-    font-family: Roboto;
-    font-size: 25px;
-    text-align: left;
-    margin-left: 50px;
-    border-radius: 15px;
-    padding: 1px 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 22em;
+.last{
+    margin-left: 150px;
 }
 
-.l{
-    font-size: 25px;
-    color: white;
-    margin-left: 410px;
-}
-
-.l1{
-    font-size: 25px;
-    color: white;
-    margin-left: 435px;
-}
-
-#name{
-    font-size: 25px;
-    color: white;
-    margin-left: 485px;
-}
-
-#schoolname{
-    font-family: Roboto;
-    font-size: 25px;
-    text-align: left;
-    margin-left: 50px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 23em;
-    margin-top: 30px;
-}
-
-#country{
-    font-family: Roboto;
-    font-size: 25px;
-    text-align: left;
-    margin-left: 50px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 23em;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#e-mail{
-    font-size: 25px;
-    color: white;
-    margin-left: 360px;
-}
-
-#pass{
-    font-family: Roboto;
-    font-size: 25px;
-    text-align: left;
-    margin-left: 50px;
-    border-radius: 15px;
-    padding: 1px 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 22em;
-    margin-top: 30px;
-}
-
-#cpass{
-    font-family: Roboto;
-    font-size: 25px;
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 593px;
-    border-radius: 15px;
-    padding: 1px 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 22em;
-}
-
-#check{
+.registration2 dt{
     font-size: 20px;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: 650px;
-    border-radius : 10px;
-    cursor        : pointer;     /* カーソル   */
-    padding       : 15px 21px;   /* 余白       */
-    background    : #ffffff;     /* 背景色     */
-    color         : #000000;     /* 文字色     */
-    line-height   : 0.5em;         /* 1行の高さ  */
-    box-shadow    : 0px 4px 4px rgba(0, 0, 0, 0.25);  /* 影の設定 */
 }
 
-p1{
-    color: white;
+dd > input{
+    font-size: 20px;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 10px;
+}
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 17px;
-    line-height: 28px;
-    margin-left: 1250px;
-    margin-bottom: 70px;
+.registration2 select{
+    width: 100%;
+    border:0;
+    padding:5px;
+    font-size:20px;
+    border:solid 1px #ccc;
+}
+dl:after{
+    visibility: hidden;
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.c1{
+text-align: center;
+}
+
+.button {
+    margin: 50px auto 0 auto;
+    color: black;
+    position: relative;
+    /*bottom: 5%;*/
+    background: white;
+    width: 10em;
+    height: 3em;
+    border-radius: 25px;
+    font-size: 15px;
+    border: none;
+    display: inline;
+}
+
+.c2{
+    position: relative;
+    left: 80%;
+    top: 200px;
 }
