@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>ユーザー登録確認</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/cRegistration.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cRegistration.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
