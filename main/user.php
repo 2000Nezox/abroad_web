@@ -1,3 +1,10 @@
+<?php
+require_once ("../class/Controll/LoginConfirmation.php");
+session_start();
+LoginConfirmation::Confirmation(__FILE__);
+
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>

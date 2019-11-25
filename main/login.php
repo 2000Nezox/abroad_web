@@ -1,3 +1,13 @@
+<?php
+session_start();
+$conninfo = [
+    'host'     => 'localhost',
+    'dbname'   => 'abroad',
+    'dbuser'   => 'root',
+    'password' => 'password'
+];
+ModelBase::setConnectionInfo($conninfo);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
