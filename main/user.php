@@ -1,7 +1,34 @@
 <?php
+require_once ("../class/Controll/CsrfMeasures.php");
 require_once ("../class/Controll/LoginConfirmation.php");
+require_once ("../class/Controll/LoginAuthentication.php");
+require_once ('../class/Controll/UserListAcquisition.php');
+
 session_start();
-LoginConfirmation::Confirmation(__FILE__);
+
+//echo $_POST["token"];
+//ログイン画面からの遷移か判定
+if(CsrfMeasures::validation()){
+    //パスワードがあっているか判定をする
+    $login_verification = new LoginAuthentication($_POST["user"],$_POST["password"]);
+    if($login_verification->authentication()){
+        print_r("ログインが完了しました");
+    }else{
+//        print_r("エラーっっｆ");
+        header("Location:".__FILE__."login.php");
+        exit();
+    }
+}else{
+    //ログインしているかどうか判定
+    print_r("ログイン画面からの遷移ではありません");
+    LoginConfirmation::Confirmation("login.php");
+}
+
+//ここから読み込みを開始
+$ans = null;
+$db = new UserListAcquisition();
+$ans = $db->allLearned();
+
 
 
 ?>
@@ -14,7 +41,7 @@ LoginConfirmation::Confirmation(__FILE__);
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/main_index.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="../js/user.js"></script>
 <!--    <script src="../js/ajex.js"></script>-->
 </head>
 <body>
@@ -41,40 +68,75 @@ LoginConfirmation::Confirmation(__FILE__);
         <tr>
             <td></td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="" id="refine-select1">
+                    <option value=""></option>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="" id="refine-select2">
+                    <option value=""></option>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="" id="refine-select3">
+                    <option value=""></option>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="" id="refine-select4">
+                    <option value=""></option>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="" id="refine-select5">
+                    <option value=""></option>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="" id="refine-select6">
+                    <option value=""></option>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="" id="refine-select7">
+                    <option value=""></option>
                 </select>
             </td>
+<!--            <td>-->
+<!--                <select id="">-->
+<!--                    <option value="">---</option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <select>-->
+<!--                    <option value="">---</option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <select>-->
+<!--                    <option value="">---</option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <select>-->
+<!--                    <option value="">---</option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <select>-->
+<!--                    <option value="">---</option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <select>-->
+<!--                    <option value="">---</option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <select>-->
+<!--                    <option value="">---</option>-->
+<!--                </select>-->
+<!--            </td>-->
         </tr>
         </tbody>
     </table>
@@ -94,19 +156,27 @@ LoginConfirmation::Confirmation(__FILE__);
             </tr>
             <!-- こんなかんじ -->
             <?php
-            //                for($i = 1; $i <= 30; $i++){
-            //                    echo '            <tr>
-            //                <td>1801017</td>
-            //                <td>麻生情報ビジネス専門学校</td>
-            //                <td>情報システム専攻科</td>
-            //                <td>久家まさと</td>
-            //                <td>2年</td>
-            //                <td>酒井　春華</td>
-            //                <td>サカイ　ハルカ</td>
-            //                <td>あり</td>
-            //            </tr>
-            //            ';
-            //                }
+                $id = 0;
+                foreach ($ans as $value){
+                    if(is_null($value[9])){
+                        $value[9] = "いいえ";
+                    }else{
+                        $value[9] = "はい";
+                    }
+                    echo "
+                        <tr id='content-$id'>
+                            <td>$value[0]</td>
+                            <td>$value[1]</td>
+                            <td>$value[2]</td>
+                            <td>$value[3]</td>
+                            <td>$value[4]年</td>
+                            <td>$value[5]　$value[6]</td>
+                            <td>$value[7]　$value[8]</td>
+                            <td>$value[9]</td>
+                        </tr>
+                    ";
+                    $id++;
+                }
             ?>
         </table>
     </div>
