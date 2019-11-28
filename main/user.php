@@ -1,8 +1,14 @@
 <?php
-require_once ("../class/Controll/CsrfMeasures.php");
-require_once ("../class/Controll/LoginConfirmation.php");
-require_once ("../class/Controll/LoginAuthentication.php");
-require_once ('../class/Controll/UserListAcquisition.php');
+//require_once("../class/Utili/CsrfMeasures.php");
+//require_once("../class/Controll/account/login/LoginConfirmation.php");
+//require_once("../class/Controll/account/login/LoginAuthentication.php");
+//require_once('../class/Controll/account/operation/UserListAcquisition.php');
+require_once ('C:\xampp\htdocs\abroad_web\vendor\autoload.php');
+
+use myapp\Utili\CsrfMeasures;
+use myapp\Controll\account\login\LoginAuthentication;
+use myapp\Controll\account\login\LoginConfirmation;
+use myapp\Controll\account\operation\UserListAcquisition;
 
 session_start();
 
@@ -70,6 +76,7 @@ $ans = $db->allLearned();
             <td>
                 <select name="" id="refine-select1">
                     <option value=""></option>
+                    <option value="麻生情報ビジネス専門学校 福岡校">麻生情報ビジネス専門学校 福岡校</option>
                 </select>
             </td>
             <td>
@@ -141,7 +148,7 @@ $ans = $db->allLearned();
         </tbody>
     </table>
     <div class="box">
-        <table class="tablebody">
+        <table class="tablebody" id="table-body">
             <!-- ここはphpでデータベースから持ってきて埋め込む-->
             <!-- 以下イメージ、上記の機能が完了後は削除-->
             <tr>
@@ -156,7 +163,6 @@ $ans = $db->allLearned();
             </tr>
             <!-- こんなかんじ -->
             <?php
-                $id = 0;
                 foreach ($ans as $value){
                     if(is_null($value[9])){
                         $value[9] = "いいえ";
@@ -164,7 +170,7 @@ $ans = $db->allLearned();
                         $value[9] = "はい";
                     }
                     echo "
-                        <tr id='content-$id'>
+                        <tr>
                             <td>$value[0]</td>
                             <td>$value[1]</td>
                             <td>$value[2]</td>
@@ -175,7 +181,6 @@ $ans = $db->allLearned();
                             <td>$value[9]</td>
                         </tr>
                     ";
-                    $id++;
                 }
             ?>
         </table>

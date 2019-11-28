@@ -1,5 +1,6 @@
 <?php
-
+namespace myapp\Utili;
+//csrf対策クラス
 class CsrfMeasures
 {
     public static function input(){

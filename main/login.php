@@ -1,5 +1,5 @@
 <?php
-require_once ("../class/Controll/CsrfMeasures.php");
+require_once("../class/Controll/CsrfMeasures.php");
 
 session_start();
 $sessionid = CsrfMeasures::input();

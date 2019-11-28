@@ -1,6 +1,8 @@
 <?php
-require_once('ModelBase.php');
+//require_once('C:\xampp\htdocs\abroad_web\class\Model\ModelBase.php');
+namespace myapp\Model\account\login;
 
+use myapp\Model\ModelBase;
 class AuthenticationDB extends ModelBase
 {
     private $name = 'teacher';
