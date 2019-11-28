@@ -47,9 +47,10 @@ dd{
 
 dd > input{
     font-size: 20px;
-    padding: 10px 0;
+    padding: 10px 5px;
     width: 100%;
     border-radius: 10px;
+    border:none;
 }
 
 .registration2 select{

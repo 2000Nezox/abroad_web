@@ -14,8 +14,6 @@ ModelBase::setConnectionInfo($conninfo);
     <meta charset="UTF-8">
     <title>ログインページ</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/setting_list.css">
     <link rel="stylesheet" href="../css/login.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
 </head>
