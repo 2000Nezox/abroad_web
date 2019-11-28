@@ -1,14 +1,8 @@
 <?php
-//require_once("../class/Utili/CsrfMeasures.php");
-//require_once("../class/Controll/account/login/LoginConfirmation.php");
-//require_once("../class/Controll/account/login/LoginAuthentication.php");
-//require_once('../class/Controll/account/operation/UserListAcquisition.php');
-require_once ('C:\xampp\htdocs\abroad_web\vendor\autoload.php');
-
-use myapp\Utili\CsrfMeasures;
-use myapp\Controll\account\login\LoginAuthentication;
-use myapp\Controll\account\login\LoginConfirmation;
-use myapp\Controll\account\operation\UserListAcquisition;
+require_once("../class/Utili/CsrfMeasures.php");
+require_once("../class/Controll/account/login/LoginConfirmation.php");
+require_once("../class/Controll/account/login/LoginAuthentication.php");
+require_once ("../class/Controll/account/operation/UserListAcquisition.php");
 
 session_start();
 
@@ -31,7 +25,6 @@ if(CsrfMeasures::validation()){
 }
 
 //ここから読み込みを開始
-$ans = null;
 $db = new UserListAcquisition();
 $ans = $db->allLearned();
 

@@ -1,5 +1,4 @@
 <?php
-namespace myapp\Controll\account\login;
 
 class LoginConfirmation
 {

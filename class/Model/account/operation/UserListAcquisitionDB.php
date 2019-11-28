@@ -1,8 +1,5 @@
 <?php
-//require_once('C:\xampp\htdocs\abroad_web\class\Model\ModelBase.php');
-namespace myapp\Model\account\operation;
-
-use myapp\Model\ModelBase;
+require_once('C:\xampp\htdocs\abroad_web\class\Model\ModelBase.php');
 
 class UserListAcquisitionDB extends ModelBase
 {

@@ -1,6 +1,6 @@
 <?php
-//require_once("C:\xampp\htdocs\abroad_web\class\Model\account\operation\UserListAcquisitionDB.php");
-namespace myapp\Controll\account\operation;
+require_once("C:\xampp\htdocs\abroad_web\class\Model\account\operation\UserListAcquisitionDB.php");
+
 
 class UserListRefine
 {

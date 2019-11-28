@@ -1,6 +1,4 @@
 <?php
-namespace myapp\Model;
-use PDO;
 
 class ModelBase
 {

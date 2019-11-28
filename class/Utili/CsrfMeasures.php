@@ -1,5 +1,5 @@
 <?php
-namespace myapp\Utili;
+
 //csrf対策クラス
 class CsrfMeasures
 {
@@ -28,3 +28,5 @@ class CsrfMeasures
 
     }
 }
+
+

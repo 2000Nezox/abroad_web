@@ -1,11 +1,9 @@
-
-//require_once('C:\xampp\htdocs\abroad_web\class\Model\account\operation\UserListAcquisitionDB.php');
-namespace myapp\Controll\account\operation;
-
-use myapp\Model\account\operation\UserListAcquisitionDB;
+<?php
+require_once('C:\xampp\htdocs\abroad_web\class\Model\account\operation\UserListAcquisitionDB.php');
 
 class UserListAcquisition
 {
+
     public function allLearned()
     {
         $db = new UserListAcquisitionDB();

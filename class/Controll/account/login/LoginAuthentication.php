@@ -1,6 +1,6 @@
 <?php
-namespace myapp\Controll\account\login;
-//require_once('C:\xampp\htdocs\abroad_web\class\Model\account\login\AuthenticationDB.php');
+
+require_once('C:\xampp\htdocs\abroad_web\class\Model\account\login\AuthenticationDB.php');
 
 
 class LoginAuthentication

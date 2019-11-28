@@ -1,6 +1,7 @@
 <?php
 require_once('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\UserListRefine.php');
 
+
 $class = new UserListRefine();
 //$ans = $class->refinement_function($_POST['attribute'],$_POST['content']);
 $ans = $class->refinement_function('school_name','麻生情報ビジネス専門学校 福岡校');

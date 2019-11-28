@@ -2,7 +2,7 @@
     require_once('./Model/AuthenticationDB.php');
     require_once ('./Model/ModelBase.php');
     require_once('./Controll/LoginAuthentication.php');
-    require_once('./Controll/UserListAcquisition.php');
+
 //    require_once ('./Controll/UserListRefine.php');
 
     session_start();
