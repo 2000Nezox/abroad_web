@@ -17,7 +17,7 @@ class UserListAcquisitionDB extends ModelBase
             affiliation_management
             ON  affiliation_management.affilation_number = user.affiliation_number
                 INNER JOIN
-            school
+            school 
             ON  affiliation_management.school_number = school.school_number
                 INNER JOIN
             department

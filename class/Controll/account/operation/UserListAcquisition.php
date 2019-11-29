@@ -1,5 +1,6 @@
 <?php
 require_once('C:\xampp\htdocs\abroad_web\class\Model\account\operation\UserListAcquisitionDB.php');
+require_once ('C:\xampp\htdocs\abroad_web\class\Utili\DBReturnValueConversion.php');
 
 class UserListAcquisition
 {
@@ -8,6 +9,7 @@ class UserListAcquisition
     {
         $db = new UserListAcquisitionDB();
         $ans = $db->normalList();
+//        $json_li = DBReturnValueConversion::dbConversion($ans);
         return $ans;
     }
 
