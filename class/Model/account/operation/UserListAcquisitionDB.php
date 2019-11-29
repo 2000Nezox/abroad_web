@@ -25,7 +25,7 @@ class UserListAcquisitionDB extends ModelBase
                 INNER JOIN
             teacher
             ON affiliation_management.responsible_number = teacher.teacher_number;'
-        , $this->name);
+            , $this->name);
         $stmt = $this->db->query($sql);
         $rows = $stmt->fetchAll();
         return $rows;

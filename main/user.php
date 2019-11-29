@@ -141,7 +141,7 @@ $ans = $db->allLearned();
         </tbody>
     </table>
     <div class="box">
-        <table class="tablebody" id="table-body">
+        <table class="tablebody" id="table_body">
             <!-- ここはphpでデータベースから持ってきて埋め込む-->
             <!-- 以下イメージ、上記の機能が完了後は削除-->
             <tr>

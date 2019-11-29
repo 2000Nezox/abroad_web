@@ -1,5 +1,5 @@
 <?php
-require_once('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\UserListRefine.php');
+require_once('../Controll/account/operation/UserListRefine.php');
 
 
 $class = new UserListRefine();
@@ -7,7 +7,21 @@ $class = new UserListRefine();
 $ans = $class->refinement_function('school_name','麻生情報ビジネス専門学校 福岡校');
 //var_dump($ans);
 //var_dump($ans);
-return json_encode($ans);
+$count = 0;
+foreach ($ans as $i){
+//    print_r($i);
+    $lst = [];
+    foreach ($i as $key => $value){
+        if(is_string($key)){
+           unset($ans[$count][$key]);
+        }
+    }
+    $count++;
+}
+//print_r($ans);
+$json_li = json_encode($ans);
+print_r($json_li);
+return $json_li;
 //    foreach ($ans as $value) {
 //        if (is_null($value[9])) {
 //            $value[9] = "いいえ";

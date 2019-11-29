@@ -5,6 +5,7 @@ $(function () {
         $.ajax({
             url:'../class/Executionfile/UserListRefineAjax.php',
             type:'POST',
+            // dataType:'json',
             data:{
                 'attribute':'school_name',
                 'content':str
@@ -12,10 +13,19 @@ $(function () {
         })
             .then(
                 function (data) {
-                    console.log(data)
+                    $obj = JSON.parse(data)
+                    $("#table_body").empty();
+                    $.each($obj,function (value) {
+                        $("#table_body").append("<tr></tr>")
+                        $.each($obj[value],function (index,value) {
+                            // console.log(index + ':' + value);
+                            $("#table_body > tr:last-child").append("<td>"+value+"</td>");
+                        })
+                    })
                 },
                 function (data) {
-
+                    console.log(data)
+                    console.log('失敗')
                 }
             )
         // .done( function (data) {
