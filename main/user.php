@@ -40,8 +40,8 @@ $ans = $db->allLearned();
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/main_index.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/account/user.js"></script>
-    <script src="../js/Utili/TableInsertionProcess.js"></script>
+    <script src="../js/user.js"></script>
+    <script src="../js/TableInsertionProcess.js"></script>
 <!--    <script src="../js/ajex.js"></script>-->
 </head>
 <body>
@@ -69,8 +69,11 @@ $ans = $db->allLearned();
             <td></td>
             <td>
                 <select name="school_name" id="refine-select1">
-                    <option value="all">全件</option>
-                    <option value="麻生情報ビジネス専門学校 福岡校">麻生情報ビジネス専門学校 福岡校</option>
+                    <?php
+                        foreach (- as $value){
+                            echo "<option value=$value>$value</option>";
+                        }
+                    ?>
                 </select>
             </td>
             <td>
