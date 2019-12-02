@@ -1,3 +1,19 @@
+<?php
+
+
+session_start()
+ $login_verification = new LoginAuthentication($_POST["user"],$_POST["password"]);
+    if($login_verification->authentication()){
+        print_r("ログインが完了しました");
+    }else{
+//        print_r("エラーっっｆ");
+        header("Location:".__FILE__."login.php");
+        exit();
+    }
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>

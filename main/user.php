@@ -3,6 +3,7 @@ require_once("../class/Utili/CsrfMeasures.php");
 require_once("../class/Controll/account/login/LoginConfirmation.php");
 require_once("../class/Controll/account/login/LoginAuthentication.php");
 require_once ("../class/Controll/account/operation/UserListAcquisition.php");
+require_once ('../class/Controll/account/operation/CategoryLearning.php');
 
 session_start();
 
@@ -25,6 +26,12 @@ if(CsrfMeasures::validation()){
 }
 
 //ここから読み込みを開始
+$category = new CategoryLearning();
+//セレクトボックスを読み込み
+$lst = new CategoryLearning();
+$category_data = json_decode($lst->category_get(),true);
+
+//データを読み込み
 $db = new UserListAcquisition();
 $ans = $db->allLearned();
 
@@ -42,7 +49,7 @@ $ans = $db->allLearned();
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/user.js"></script>
     <script src="../js/TableInsertionProcess.js"></script>
-<!--    <script src="../js/ajex.js"></script>-->
+<!--    <script src="../js/CategoryAjax.js"></script>-->
 </head>
 <body>
 <?php include ("../sharedfile/header.php");?>
@@ -69,78 +76,60 @@ $ans = $db->allLearned();
             <td></td>
             <td>
                 <select name="school_name" id="refine-select1">
+                    <option value="all">全件</option>
                     <?php
-                        foreach (- as $value){
-                            echo "<option value=$value>$value</option>";
+//                        str_replace('_','&ensp',$category_data['school']);
+                        foreach ($category_data['school'] as $key=>$value){
+                            print "<option value=$value[0]>$value[0]</option>";
                         }
                     ?>
                 </select>
             </td>
             <td>
-                <select name="" id="refine-select2">
-                    <option value=""></option>
+                <select name="department" id="refine-select2">
+                    <option value="all">全件</option>
+                    <?php
+                    foreach ($category_data['department'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
             <td>
-                <select name="" id="refine-select3">
-                    <option value=""></option>
+                <select name="teacher" id="refine-select3">
+                    <option value="all">全件</option>
+                    <?php
+                    foreach ($category_data['teacher'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
             <td>
-                <select name="" id="refine-select4">
-                    <option value=""></option>
+                <select name="grade" id="refine-select4">
+                    <option value="all">全件</option>
+                    <?php
+                    foreach ($category_data['grade'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
             <td>
-                <select name="" id="refine-select5">
-                    <option value=""></option>
-                </select>
+
             </td>
             <td>
-                <select name="" id="refine-select6">
-                    <option value=""></option>
-                </select>
+
             </td>
             <td>
-                <select name="" id="refine-select7">
-                    <option value=""></option>
+                <select name="plan" id="refine-select7">
+                    <option value="all">全件</option>
+                    <?php
+                        echo "<option value='はい'>はい</option>";
+                        echo "<option value='いいえ'>いいえ</option>";
+                    ?>
                 </select>
             </td>
-<!--            <td>-->
-<!--                <select id="">-->
-<!--                    <option value="">---</option>-->
-<!--                </select>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <select>-->
-<!--                    <option value="">---</option>-->
-<!--                </select>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <select>-->
-<!--                    <option value="">---</option>-->
-<!--                </select>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <select>-->
-<!--                    <option value="">---</option>-->
-<!--                </select>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <select>-->
-<!--                    <option value="">---</option>-->
-<!--                </select>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <select>-->
-<!--                    <option value="">---</option>-->
-<!--                </select>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--                <select>-->
-<!--                    <option value="">---</option>-->
-<!--                </select>-->
-<!--            </td>-->
         </tr>
         </tbody>
     </table>

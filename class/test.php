@@ -1,11 +1,15 @@
 <?php
-    require_once('./Model/AuthenticationDB.php');
+    require_once('./Model/account/operation/UserListAcquisitionDB.php');
     require_once ('./Model/ModelBase.php');
-    require_once('./Controll/LoginAuthentication.php');
+//    require_once('./Controll/LoginAuthentication.php')
+    require_once ('./Controll/account/operation/CategoryLearning.php');
 
 //    require_once ('./Controll/UserListRefine.php');
 
     session_start();
+    $lst = new CategoryLearning();
+    $ans = $lst->category_get();
+//    var_dump(json_decode($ans));
 //    $conninfo = [
 //        'host'     => 'localhost',
 //        'dbname'   => 'abroad',
