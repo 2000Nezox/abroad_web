@@ -24,8 +24,6 @@ class CsrfMeasures
             print_r("tokenが送られていません\n");
             return False;
         }
-
-
     }
 }
 

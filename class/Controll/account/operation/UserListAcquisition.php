@@ -9,7 +9,6 @@ class UserListAcquisition
     {
         $db = new UserListAcquisitionDB();
         $ans = $db->normalList();
-//        $json_li = DBReturnValueConversion::dbConversion($ans);
         return $ans;
     }
 

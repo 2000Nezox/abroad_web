@@ -6,10 +6,7 @@ require_once ('../Utili/DBReturnValueConversion.php');
 if($_POST['content'] == 'all'){
     $class = new UserListAcquisition();
     $ans = $class->allLearned();
-//    print_r($ans);
     $json_li = DBReturnValueConversion::dbConversion($ans);
-
-//    print_r("全件");
     print_r($json_li);
 }else{
     $class = new UserListRefine();
@@ -18,4 +15,3 @@ if($_POST['content'] == 'all'){
     print_r($json_li);
 }
 
-//return $json_li;

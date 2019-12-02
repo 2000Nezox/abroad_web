@@ -77,11 +77,8 @@ class UserListAcquisitionDB extends ModelBase
             ON affiliation_management.responsible_number = teacher.teacher_number
             WHERE %s = "%s";'
                 , $this->name,$attribute,$content);
-//            var_dump($sql);
             $stmt = $this->db->query($sql);
-//            var_dump($stmt);
             $rows = $stmt->fetchAll();
-//            var_dump($rows);
             return $rows;
         }catch (PDOException $e){
             echo $e->getMessage();

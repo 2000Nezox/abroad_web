@@ -13,11 +13,9 @@ $(function () {
             })
                 .then(
                     function (data) {
-                        // console.log(data);
                         tableInsertionProcess(data);
                     },
                     function (data) {
-                        // console.log(data);
                         console.log('失敗')
                     }
                 )
@@ -25,7 +23,6 @@ $(function () {
         $.ajax({
             url:'../class/Executionfile/UserListRefineAjax.php',
             type:'POST',
-            // dataType:'json',
             async:false,
             data:{
                 'attribute':$($id).attr('name'),
@@ -36,11 +33,9 @@ $(function () {
             .then(
                 function (data) {
                     console.log("成功");
-                    // console.log(data);
                     tableInsertionProcess(data);
                 },
                 function () {
-                    // console.log(data);
                     console.log('失敗')
                 }
             )
