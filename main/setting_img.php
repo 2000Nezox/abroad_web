@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/setting_img.css">
 <!--    <link rel="stylesheet" href="./css/settingimage_delete.css">-->
     <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="../js/logout.js"></script>
 </head>
 <body>
 <?php include('../sharedfile/header.php') ?>

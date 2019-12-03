@@ -1,12 +1,11 @@
 <?php
+require_once("../class/Controll/CsrfMeasures.php");
+
 session_start();
-$conninfo = [
-    'host'     => 'localhost',
-    'dbname'   => 'abroad',
-    'dbuser'   => 'root',
-    'password' => 'password'
-];
-ModelBase::setConnectionInfo($conninfo);
+$sessionid = CsrfMeasures::input();
+
+//print_r($sessionid)
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -22,8 +21,9 @@ ModelBase::setConnectionInfo($conninfo);
     <p>by KUGA Tech</p>
     <form method="post" action="user.php">
         <div class="login-form1">
-            <input class="h" type="text" name="name" value="" placeholder="教職員番号">
-            <input class="h" type="text" name="name" value="" placeholder="パスワード">
+            <input class="h" type="text" name="user" value="" placeholder="教職員番号">
+            <input class="h" type="text" name="password" value="" placeholder="パスワード">
+            <input type="hidden" name="token" value="<?php echo $sessionid ?>" >
         </div>
             <input id="login" type="submit" name ="check" value = "ログイン">
     </form>

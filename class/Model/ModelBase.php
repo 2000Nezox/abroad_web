@@ -1,6 +1,5 @@
 <?php
 
-
 class ModelBase
 {
     private static $connInfo;
@@ -14,17 +13,31 @@ class ModelBase
 
     public function initDb()
     {
+        self::$connInfo = [
+            'host'     => 'localhost',
+            'dbname'   => 'abroad',
+            'dbuser'   => 'root',
+            'password' => 'password'
+        ];
+
         $dsn = sprintf(
             'mysql:host=%s;dbname=%s;port=3306;',
             self::$connInfo['host'],
             self::$connInfo['dbname']
+
         );
+
         $this->db = new PDO($dsn, self::$connInfo['dbuser'], self::$connInfo['password']);
     }
 
     public static function setConnectionInfo($connInfo)
     {
-        self::$connInfo = $connInfo;
+        self::$connInfo = [
+            'host'     => 'localhost',
+            'dbname'   => 'abroad',
+            'dbuser'   => 'root',
+            'password' => 'password'
+        ];
     }
 
     // クエリ結果を取得

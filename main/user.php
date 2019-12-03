@@ -1,7 +1,40 @@
 <?php
-require_once ("../class/Controll/LoginConfirmation.php");
+require_once("../class/Utili/CsrfMeasures.php");
+require_once("../class/Controll/account/login/LoginConfirmation.php");
+require_once("../class/Controll/account/login/LoginAuthentication.php");
+require_once ("../class/Controll/account/operation/UserListAcquisition.php");
+require_once ('../class/Controll/account/operation/CategoryLearning.php');
+
 session_start();
-LoginConfirmation::Confirmation(__FILE__);
+
+//echo $_POST["token"];
+//ログイン画面からの遷移か判定
+if(CsrfMeasures::validation()){
+    //パスワードがあっているか判定をする
+    $login_verification = new LoginAuthentication($_POST["user"],$_POST["password"]);
+    if($login_verification->authentication()){
+        print_r("ログインが完了しました");
+    }else{
+//        print_r("エラーっっｆ");
+        header("Location:".__FILE__."login.php");
+        exit();
+    }
+}else{
+    //ログインしているかどうか判定
+    print_r("ログイン画面からの遷移ではありません");
+    LoginConfirmation::Confirmation("login.php");
+}
+
+//ここから読み込みを開始
+$category = new CategoryLearning();
+//セレクトボックスを読み込み
+$lst = new CategoryLearning();
+$category_data = json_decode($lst->category_get(),true);
+
+//データを読み込み
+$db = new UserListAcquisition();
+$ans = $db->allLearned();
+
 
 
 ?>
@@ -14,8 +47,9 @@ LoginConfirmation::Confirmation(__FILE__);
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/main_index.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/header.js"></script>
-<!--    <script src="../js/ajex.js"></script>-->
+    <script src="../js/user.js"></script>
+    <script src="../js/TableInsertionProcess.js"></script>
+<!--    <script src="../js/CategoryAjax.js"></script>-->
 </head>
 <body>
 <?php include ("../sharedfile/header.php");?>
@@ -41,45 +75,66 @@ LoginConfirmation::Confirmation(__FILE__);
         <tr>
             <td></td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="school_name" id="refine-select1">
+                    <option value="all">全件</option>
+                    <?php
+//                        str_replace('_','&ensp',$category_data['school']);
+                        foreach ($category_data['school'] as $key=>$value){
+                            print "<option value=$value[0]>$value[0]</option>";
+                        }
+                    ?>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="department" id="refine-select2">
+                    <option value="all">全件</option>
+                    <?php
+                    foreach ($category_data['department'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="teacher" id="refine-select3">
+                    <option value="all">全件</option>
+                    <?php
+                    foreach ($category_data['teacher'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="grade" id="refine-select4">
+                    <option value="all">全件</option>
+                    <?php
+                    foreach ($category_data['grade'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
-                </select>
+
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
-                </select>
+
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="plan" id="refine-select7">
+                    <option value="all">全件</option>
+                    <?php
+                        echo "<option value='はい'>はい</option>";
+                        echo "<option value='いいえ'>いいえ</option>";
+                    ?>
                 </select>
             </td>
         </tr>
         </tbody>
     </table>
     <div class="box">
-        <table class="tablebody">
+        <table class="tablebody" id="table_body">
             <!-- ここはphpでデータベースから持ってきて埋め込む-->
             <!-- 以下イメージ、上記の機能が完了後は削除-->
             <tr>
@@ -94,19 +149,25 @@ LoginConfirmation::Confirmation(__FILE__);
             </tr>
             <!-- こんなかんじ -->
             <?php
-            //                for($i = 1; $i <= 30; $i++){
-            //                    echo '            <tr>
-            //                <td>1801017</td>
-            //                <td>麻生情報ビジネス専門学校</td>
-            //                <td>情報システム専攻科</td>
-            //                <td>久家まさと</td>
-            //                <td>2年</td>
-            //                <td>酒井　春華</td>
-            //                <td>サカイ　ハルカ</td>
-            //                <td>あり</td>
-            //            </tr>
-            //            ';
-            //                }
+                foreach ($ans as $value){
+                    if(is_null($value[9])){
+                        $value[9] = "いいえ";
+                    }else{
+                        $value[9] = "はい";
+                    }
+                    echo "
+                        <tr>
+                            <td>$value[0]</td>
+                            <td>$value[1]</td>
+                            <td>$value[2]</td>
+                            <td>$value[3]</td>
+                            <td>$value[4]年</td>
+                            <td>$value[5]　$value[6]</td>
+                            <td>$value[7]　$value[8]</td>
+                            <td>$value[9]</td>
+                        </tr>
+                    ";
+                }
             ?>
         </table>
     </div>
