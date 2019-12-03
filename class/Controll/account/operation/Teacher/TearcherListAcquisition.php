@@ -1,6 +1,6 @@
 <?php
-require_once('C:\xampp\htdocs\abroad_web\class\Model\account\operation\ListAcquisitionDB.php');
-require_once('C:\xampp\htdocs\abroad_web\class\Utili\DBReturnValueConversion.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'\abroad_web\class\Model\account\operation\ListAcquisitionDB.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'\abroad_web\class\Utili\DBReturnValueConversion.php');
 
 class TearcherListAcquisition
 {

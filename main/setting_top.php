@@ -1,6 +1,6 @@
 <?php
-require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\login\LoginConfirmation.php');
-require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\OwnProfileLearning.php');
+require_once ('..\class\Controll\account\login\LoginConfirmation.php');
+require_once ('..\class\Controll\account\operation\Teacher\OwnProfileLearning.php');
 
 session_start();
 LoginConfirmation::Confirmation("login.php");
