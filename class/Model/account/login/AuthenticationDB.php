@@ -1,5 +1,6 @@
 <?php
-require_once('C:\xampp\htdocs\abroad_web\class\Model\ModelBase.php');
+//require_once('\class\Model\ModelBase.php');
+require_once ("./class/Model/ModelBase.php");
 
 class AuthenticationDB extends ModelBase
 {
