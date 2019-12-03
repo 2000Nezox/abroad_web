@@ -12,7 +12,7 @@ $(function () {
             })
                 .then(
                     function (data) {
-                        UsertableInsertionProcess(data);
+                        userTableInsertionProcess(data);
                     },
                     function (data) {
                         console.log('失敗')
@@ -32,8 +32,7 @@ $(function () {
             .then(
                 function (data) {
                     console.log("成功");
-                    console.log(data)
-                    UsertableInsertionProcess(data);
+                    userTableInsertionProcess(data);
                 },
                 function () {
                     console.log('失敗')

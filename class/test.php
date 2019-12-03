@@ -1,11 +1,11 @@
 <?php
-require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\TeacherCategoryLearning.php');
+require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\OwnProfileLearning.php');
 //    require_once('./Controll/LoginAuthentication.php')
 //    require_once('./Controll/account/operation/UserListAcquisition.php');
 
 //    require_once ('./Controll/UserListRefine.php');
-$lst = new TeacherCategoryLearning();
-$category_data = json_decode($lst->category_get(),true);
+$lst = new OwnProfileLearning();
+$category_data = json_decode($lst->getProfile(),true);
 var_dump($category_data);
 //    session_start();
 ////    $lst = new UserListAcquisition();
