@@ -1,14 +1,16 @@
 <?php
-    require_once('./Model/account/operation/UserListAcquisitionDB.php');
-    require_once ('./Model/ModelBase.php');
+require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\TeacherCategoryLearning.php');
 //    require_once('./Controll/LoginAuthentication.php')
-    require_once ('./Controll/account/operation/CategoryLearning.php');
+//    require_once('./Controll/account/operation/UserListAcquisition.php');
 
 //    require_once ('./Controll/UserListRefine.php');
-
-    session_start();
-    $lst = new CategoryLearning();
-    $ans = $lst->category_get();
+$lst = new TeacherCategoryLearning();
+$category_data = json_decode($lst->category_get(),true);
+var_dump($category_data);
+//    session_start();
+////    $lst = new UserListAcquisition();
+//    $ans = $lst->allLearned();
+//    var_dump($ans);
 //    var_dump(json_decode($ans));
 //    $conninfo = [
 //        'host'     => 'localhost',

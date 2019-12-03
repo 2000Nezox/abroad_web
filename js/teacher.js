@@ -1,19 +1,19 @@
 $(function () {
-    function categoryAjax($id) {
+    function categoryAjax($id,$attribute) {
+        // console.log($attribute,$($id).val())
         if($($id).val() == 'all'){
             console.log('全件');
             $.ajax({
-                url:'../class/Controll/account/operation/UserListAcquisition.php',
+                url:'../class/Controll/account/operation/Teacher/TearcherListAcquisition.php',
                 type:'POST',
-                // dataType:'json',
                 data:{
-                    'attribute':$($id).attr('name'),
+                    'attribute':$attribute,
                     'content':$($id).val(),
                 }
             })
                 .then(
                     function (data) {
-                        tableInsertionProcess(data);
+                        teacherTableInsertionProcess(data)
                     },
                     function (data) {
                         console.log('失敗')
@@ -21,11 +21,11 @@ $(function () {
                 )
         }
         $.ajax({
-            url:'../class/Executionfile/UserListRefineAjax.php',
+            url:'../class/Executionfile/TeacherListRefineAjax.php',
             type:'POST',
             async:false,
             data:{
-                'attribute':$($id).attr('name'),
+                'attribute':$attribute,
                 'content':$($id).val(),
 
             }
@@ -33,11 +33,24 @@ $(function () {
             .then(
                 function (data) {
                     console.log("成功");
-                    tableInsertionProcess(data);
+                    console.log(data);
+                    teacherTableInsertionProcess(data)
+                    //書き込み処理
                 },
                 function () {
                     console.log('失敗')
                 }
             )
     }
+
+    $('#select-1').change(function () {
+        // console.log($('#select-1'),$('#select-1').val())
+        categoryAjax($('#select-1'),'school_name')
+    });
+    $('#select-2').change(function () {
+        categoryAjax($('#select-2'),'country_name')
+    })
+
 });
+
+

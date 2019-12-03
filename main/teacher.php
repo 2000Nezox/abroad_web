@@ -1,4 +1,19 @@
 <?php
+require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\TeacherCategoryLearning.php');
+require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\TearcherListAcquisition.php');
+require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\login\LoginConfirmation.php');
+
+session_start();
+
+LoginConfirmation::Confirmation("login.php");
+
+//セレクトボックスを読み込み
+$lst = new TeacherCategoryLearning();
+$category_data = json_decode($lst->category_get(),true);
+
+//データを読み込み
+$db = new TearcherListAcquisition();
+$ans = $db->allLearned();
 
 ?>
 <!DOCTYPE html>
@@ -10,8 +25,8 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/teacher.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/logout.js"></script>
-    <!--    <script src="../js/ajex.js"></script>-->
+    <script src="../js/teacher.js"></script>
+    <script src="../js/TeacherTableInsertionProcess.js"></script>
 </head>
 <body>
 <?php include ("../sharedfile/header.php");?>
@@ -24,58 +39,55 @@
         <thead>
         <tr>
             <th>教員番号</th>
+            <th>姓名</th>
             <th>学校名</th>
-            <th>姓　名</th>
             <th>担当国名</th>
+            <th>メール</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td></td>
+            <td></td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="school" id="select-1">
+                    <option value="all">全件</option>
+                    <?php
+                    //                        str_replace('_','&ensp',$category_data['school']);
+                    foreach ($category_data['school'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
             <td>
-                <select>
-                    <option value="">---</option>
+                <select name="country" id="select-2">
+                    <option value="all">全件</option>
+                    <?php
+                    foreach ($category_data['country'] as $key=>$value){
+                        echo "<option value=$value[0]>$value[0]</option>";
+                    }
+                    ?>
                 </select>
             </td>
-            <td>
-                <select>
-                    <option value="">---</option>
-                </select>
-            </td>
+            <td></td>
         </tr>
         </tbody>
     </table>
     <div class="box">
-        <table class="tablebody">
-            <!-- ここはphpでデータベースから持ってきて埋め込む-->
-            <!-- 以下イメージ、上記の機能が完了後は削除-->
-            <tr>
-                <td>1801017</td>
-                <td>麻生情報ビジネス専門学校</td>
-                <td>情報システム専攻科</td>
-                <td>久家まさと</td>
-
-            </tr>
-            <!-- こんなかんじ -->
+        <table class="tablebody" id="table_body">
             <?php
-            //                for($i = 1; $i <= 30; $i++){
-            //                    echo '            <tr>
-            //                <td>1801017</td>
-            //                <td>麻生情報ビジネス専門学校</td>
-            //                <td>情報システム専攻科</td>
-            //                <td>久家まさと</td>
-            //                <td>2年</td>
-            //                <td>酒井　春華</td>
-            //                <td>サカイ　ハルカ</td>
-            //                <td>あり</td>
-            //            </tr>
-            //            ';
-            //                }
+            foreach ($ans as $value){
+                echo "
+                        <tr>
+                            <td>$value[0]</td>
+                            <td>$value[1]</td>
+                            <td>$value[2]</td>
+                            <td>$value[3]</td>
+                            <td>$value[4]</td>
+                        </tr>
+                    ";
+            }
             ?>
         </table>
     </div>

@@ -1,12 +1,11 @@
 <?php
-require_once ('C:\xampp\htdocs\abroad_web\class\Model\account\operation\UserListAcquisitionDB.php');
-require_once ('C:\xampp\htdocs\abroad_web\class\Utili\DBReturnValueConversion.php');
+require_once('C:\xampp\htdocs\abroad_web\class\Model\account\operation\CategoryLearningDB.php');
+require_once('C:\xampp\htdocs\abroad_web\class\Utili\DBReturnValueConversion.php');
 
 
-class CategoryLearning
+class UserCategoryLearning
 {
     private $lst;
-
     public function __construct()
     {
         $this->lst = [
@@ -17,7 +16,7 @@ class CategoryLearning
     }
 
     public function category_get(){
-        $db = new UserListAcquisitionDB();
+        $db = new CategoryLearningDB('user');
         $ans = $db->category_list($this->lst);
         $ans['grade'] = ['1','2','3','4'];
         $ans['plan'] = ['はい','いいえ'];

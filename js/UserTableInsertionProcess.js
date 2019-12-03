@@ -1,4 +1,4 @@
-function tableInsertionProcess(data) {
+function userTableInsertionProcess(data) {
     $obj = JSON.parse(data);
     $("#table_body").empty();
     let tmp = 0;

@@ -26,6 +26,4 @@ class AuthenticationDB extends ModelBase
             echo $e->getMessage();
         }
     }
-
-
 }

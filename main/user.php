@@ -2,8 +2,8 @@
 require_once("../class/Utili/CsrfMeasures.php");
 require_once("../class/Controll/account/login/LoginConfirmation.php");
 require_once("../class/Controll/account/login/LoginAuthentication.php");
-require_once ("../class/Controll/account/operation/UserListAcquisition.php");
-require_once ('../class/Controll/account/operation/CategoryLearning.php');
+require_once("../class/Controll/account/operation/User/UserListAcquisition.php");
+require_once('../class/Controll/account/operation/User/UserCategoryLearning.php');
 
 session_start();
 
@@ -26,9 +26,9 @@ if(CsrfMeasures::validation()){
 }
 
 //ここから読み込みを開始
-$category = new CategoryLearning();
+$category = new UserCategoryLearning();
 //セレクトボックスを読み込み
-$lst = new CategoryLearning();
+$lst = new UserCategoryLearning();
 $category_data = json_decode($lst->category_get(),true);
 
 //データを読み込み
@@ -48,7 +48,7 @@ $ans = $db->allLearned();
     <link rel="stylesheet" href="../css/main_index.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/user.js"></script>
-    <script src="../js/TableInsertionProcess.js"></script>
+    <script src="../js/UserTableInsertionProcess.js"></script>
 <!--    <script src="../js/CategoryAjax.js"></script>-->
 </head>
 <body>
