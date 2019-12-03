@@ -1,7 +1,7 @@
 <?php
-require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\TeacherCategoryLearning.php');
-require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\TearcherListAcquisition.php');
-require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\login\LoginConfirmation.php');
+require_once ('..\class\Controll\account\operation\Teacher\TeacherCategoryLearning.php');
+require_once ('..\class\Controll\account\operation\Teacher\TearcherListAcquisition.php');
+require_once ('..\class\Controll\account\login\LoginConfirmation.php');
 
 session_start();
 

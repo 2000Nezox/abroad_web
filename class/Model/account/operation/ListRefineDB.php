@@ -1,5 +1,5 @@
 <?php
-require_once('C:\xampp\htdocs\abroad_web\class\Model\account\operation\ListDB.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'\abroad_web\class\Model\account\operation\ListDB.php');
 
 
 class ListRefineDB extends ListDB
