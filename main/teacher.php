@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,7 +10,7 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/teacher.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="../js/logout.js"></script>
     <!--    <script src="../js/ajex.js"></script>-->
 </head>
 <body>
