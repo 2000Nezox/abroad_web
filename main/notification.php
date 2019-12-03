@@ -8,7 +8,20 @@
     <link rel="stylesheet" href="../css/notification.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/logout.js"></script>
-<!--    <script src="../js/ajex.js"></script>-->
+    <script type="text/javascript" src="../js/jquery_ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../js/jquery_ui/jquery-ui.css">
+
+    <link href="../js/jquery_multi/css/multi-select.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="../js/jquery_multi/js/jquery.multi-select.js" type="text/javascript"></script>
+
+
+    <script>
+//       ドロップボックスにチェックボックスを埋め込む処理
+        $(function() {
+            $('#my-select').multiSelect();
+        });
+    </script>
+
 </head>
 <body>
 <?php include ("../sharedfile/header.php");?>
@@ -22,8 +35,15 @@
         <div class="course-input-content">
             <div id="send-input">
                 <dl>
-                    <dt>送信先</dt>
-                    <dd><input type="text"></dd>
+                    <dt>送信先(右側のリストに入ってるグループに送信する)</dt>
+                    <dd>
+                        <select multiple="multiple" id="my-select" name="my-select[]">
+                            <option value='elem_1'>elem 1</option>
+                            <option value='elem_2'>elem 2</option>
+                            <option value='elem_3'>elem 3</option>
+                            <option value='elem_4'>elem 4</option>
+                        </select>
+                    </dd>
 
                     <dt>案内講座</dt>
                     <dd>

@@ -1,9 +1,10 @@
 $(function () {
     function categoryAjax($id,$attribute) {
+        // console.log($attribute,$($id).val())
         if($($id).val() == 'all'){
             console.log('全件');
             $.ajax({
-                url:'../class/Controll/account/operation/UserListAcquisition.php',
+                url:'../class/Controll/account/operation/Teacher/TearcherListAcquisition.php',
                 type:'POST',
                 data:{
                     'attribute':$attribute,
@@ -12,7 +13,7 @@ $(function () {
             })
                 .then(
                     function (data) {
-                        userTableInsertionProcess(data);
+                        teacherTableInsertionProcess(data)
                     },
                     function (data) {
                         console.log('失敗')
@@ -20,7 +21,7 @@ $(function () {
                 )
         }
         $.ajax({
-            url:'../class/Executionfile/UserListRefineAjax.php',
+            url:'../class/Executionfile/TeacherListRefineAjax.php',
             type:'POST',
             async:false,
             data:{
@@ -32,7 +33,9 @@ $(function () {
             .then(
                 function (data) {
                     console.log("成功");
-                    userTableInsertionProcess(data);
+                    console.log(data);
+                    teacherTableInsertionProcess(data)
+                    //書き込み処理
                 },
                 function () {
                     console.log('失敗')
@@ -40,21 +43,14 @@ $(function () {
             )
     }
 
-    $('#refine-select1').change(function () {
-        categoryAjax($('#refine-select1'),$('#refine-select1').attr('name'))
+    $('#select-1').change(function () {
+        // console.log($('#select-1'),$('#select-1').val())
+        categoryAjax($('#select-1'),'school_name')
+    });
+    $('#select-2').change(function () {
+        categoryAjax($('#select-2'),'country_name')
     })
-    $('#refine-select2').change(function () {
-        categoryAjax($('#refine-select2'),'department_name')
-    })
-    $('#refine-select3').change(function () {
-        categoryAjax($('#refine-select3'),'teacher.name')
-    })
-    $('#refine-select4').change(function () {
-        categoryAjax($('#refine-select4'),$('#refine-select4').attr('name'))
-    })
-    $('#refine-select7').change(function () {
-        categoryAjax($('#refine-select7'))
-    })
+
 });
 
 

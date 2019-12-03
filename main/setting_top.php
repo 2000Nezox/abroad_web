@@ -1,3 +1,13 @@
+<?php
+require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\login\LoginConfirmation.php');
+require_once ('C:\xampp\htdocs\abroad_web\class\Controll\account\operation\Teacher\OwnProfileLearning.php');
+
+session_start();
+LoginConfirmation::Confirmation("login.php");
+
+$db = new OwnProfileLearning();
+$lst = $db->getProfile();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,31 +26,41 @@
     <div class="top-right">
         <div class="top-right1">
             <div class="setting-display">
-                <dl>
-                    <dt>姓名</dt>
-                    <dd>久家政人</dd>
-                    <dt>所属学校名</dt>
-                    <dd>麻生情報ビジネス専門学校</dd>
-                    <dt>メールアドレス</dt>
-                    <dd>1111111@s.asojuku.ac.jp</dd>
-                    <dt>担当国名</dt>
-                    <dd>麻生の先生ではありません</dd>
-                </dl>
+                <?php
+                foreach ($lst as $key=>$value){
+                    echo " 
+                        <dl>
+                            <dt>姓名</dt>
+                            <dd>$value[0]</dd>
+                            <dt>所属学校名</dt>
+                            <dd>$value[1]</dd>
+                            <dt>メールアドレス</dt>
+                            <dd>$value[2]</dd>
+                            <dt>担当国名</dt>
+                            <dd>$value[3]</dd>
+                        </dl>";
+                }
+
+                ?>
             </div>
-            <div class="setting-input">
-                <dl>
-                    <dt>メールアドレス</dt>
-                    <dd><input type="email"></dd>
-                    <dt>担当国名</dt>
-                    <dd><input type="text"></dd>
-                    <dt>パスワード</dt>
-                    <dd>
-                        <input type="password">
-                        <input type="password">
-                    </dd>
-                </dl>
-            </div>
-            <button>更新</button>
+            <form action="../class/Executionfile/ProfileVerification.php">
+                <div class="setting-input">
+
+                        <dl>
+                            <dt>メールアドレス</dt>
+                            <dd><input type="email"></dd>
+                            <dt>担当国名</dt>
+                            <dd><input type="text"></dd>
+                            <dt>パスワード</dt>
+                            <dd>
+                                <input type="password">
+                                <input type="password">
+                            </dd>
+                        </dl>
+
+                </div>
+                <button>更新</button>
+            </form>
         </div>
     </div>
 </body>
