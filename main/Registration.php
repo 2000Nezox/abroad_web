@@ -9,6 +9,9 @@
 </head>
 <body>
 <div class="registration">
+    <?php
+        echo DIRECTORY_SEPARATOR;
+    ?>
     <div class="registration1">
         <h1>ASO English +</h1>
         <p>管理者登録</p>
