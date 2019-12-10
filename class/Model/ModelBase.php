@@ -21,13 +21,13 @@ class ModelBase
         ];
 
         $dsn = sprintf(
-            'mysql:host=%s;dbname=%s;port=3306;',
+            'mysql:host=%s;dbname=%s;port=3306;charset=utf8;',
             self::$connInfo['host'],
             self::$connInfo['dbname']
 
         );
 
-        $this->db = new PDO($dsn, self::$connInfo['dbuser'], self::$connInfo['password']);
+        $this->db = new PDO($dsn,self::$connInfo['dbuser'], self::$connInfo['password']);
     }
 
     public static function setConnectionInfo($connInfo)
