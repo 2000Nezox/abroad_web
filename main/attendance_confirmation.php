@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/attendance_confirmation.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/logout.js"></script>
-    <!--    <script src="../js/ajex.js"></script>-->
 </head>
 <body>
 <?php include ("../sharedfile/header.php");?>

@@ -1,14 +1,21 @@
 <?php
-    require_once('./Model/account/operation/UserListAcquisitionDB.php');
-    require_once ('./Model/ModelBase.php');
-//    require_once('./Controll/LoginAuthentication.php')
-    require_once ('./Controll/account/operation/CategoryLearning.php');
+require_once 'Controll/setting/cource/CourceGet.php';
 
-//    require_once ('./Controll/UserListRefine.php');
+$ans = new CourceGet();
+$result =  $ans->school_get(2);
+var_dump($result);
 
-    session_start();
-    $lst = new CategoryLearning();
-    $ans = $lst->category_get();
+//    require_once ('C:\xampp\htdocs\abroad_web\class\Controll\setting\OwnProfileChange.php');
+//
+////    require_once ('./Controll/UserListRefine.php');
+//
+//    session_start();
+//    $array = [
+//        "email" => '31423423123124@s.asojuku.ac.jp'
+//
+//    ];
+//    $profile = new OwnProfileChange();
+//    $profile->update_profile($array,9990002)
 //    var_dump(json_decode($ans));
 //    $conninfo = [
 //        'host'     => 'localhost',

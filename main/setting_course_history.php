@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,18 +19,6 @@
 <?php include ('../sharedfile/setting_list.php') ?>
 <div class="setting-right">
     <table class="tablecategory">
-        <!--            <thead>-->
-        <!--            <tr>-->
-        <!--                <th class="table">学籍番号</th>-->
-        <!--                <th>開催名</th>-->
-        <!--                <th>開催日</th>-->
-        <!--                <th>開催時</th>-->
-        <!--                <th>開催場所</th>-->
-        <!--                <th>カテゴリ</th>-->
-        <!--                <th>作成者</th>-->
-        <!--            </tr>-->
-        <!--            </thead>-->
-
         <tr>
             <td>
                 <select name="refine">

@@ -1,3 +1,9 @@
+<?php
+    require_once '../class/Controll/setting/cource/CourceGet.php';
+    session_start();
+    $ans = new CourceGet();
+    $result =  $ans->get();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,6 +15,7 @@
     <link rel="stylesheet" href="../css/setting_study_abroad_detail.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/logout.js"></script>
+    <script src="../js/setting_study_abroad_detail.js"></script>
 </head>
 <body>
     <?php include('../sharedfile/header.php') ?>
@@ -16,79 +23,30 @@
 
     <div class="course-list" >
             <table class="tablecategory">
-                <!--            <thead>-->
-                <!--            <tr>-->
-                <!--                <th class="table">学籍番号</th>-->
-                <!--                <th>開催名</th>-->
-                <!--                <th>開催日</th>-->
-                <!--                <th>開催時</th>-->
-                <!--                <th>開催場所</th>-->
-                <!--                <th>カテゴリ</th>-->
-                <!--                <th>作成者</th>-->
-                <!--            </tr>-->
-                <!--            </thead>-->
-
                 <tr>
                     <td>
-                        <select name="refine">
-                            <option value="">---</option>
+                        <select id="country_refine">
+                            <option value="all">全て</option>
+                            <?php
+                                echo $result['country']
+                            ?>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <select>
-                            <option value="">---</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select>
-                            <option value="">---</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select>
-                            <option value="">---</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select>
-                            <option value="">---</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select>
-                            <option value="">---</option>
-                        </select>
-                    </td>
+                    <td>留学先学校名</td>
+                    <td>コース名</td>
+                    <td>期間</td>
+                    <td>参考金額（万）</td>
+                    <td>参考</td>
                 </tr>
             </table>
             <div class="box">
-                <table class="tablebody">
+                <table class="tablebody" id="table_body">
                     <!-- ここはphpでデータベースから持ってきて埋め込む-->
                     <!-- 以下イメージ、上記の機能が完了後は削除-->
-                    <tr>
-                        <td>スポーツEnglish</td>
-                        <td>2019/09/06</td>
-                        <td>17:00~18:00</td>
-                        <td>1155教室</td>
-                        <td>イベント</td>
-                    </tr>
-                    <!-- こんなかんじ -->
                     <?php
-                    //                for($i = 1; $i <= 30; $i++){
-                    //                    echo '            <tr>
-                    //                <td>1801017</td>
-                    //                <td>麻生情報ビジネス専門学校</td>
-                    //                <td>情報システム専攻科</td>
-                    //                <td>久家まさと</td>
-                    //                <td>2年</td>
-                    //                <td>酒井　春華</td>
-                    //                <td>サカイ　ハルカ</td>
-                    //                <td>あり</td>
-                    //            </tr>
-                    //            ';
-                    //                }
+                        echo $result['data']
                     ?>
                 </table>
             </div>
@@ -96,16 +54,24 @@
             <div class="setting-course-input1">
                 <div>
                     <ul>
-                        <li><select></select></li>
-                        <li><input type="text"></li>
-                        <li><input type="text"></li>
-                        <li><select name="" id=""></select></li>
-                        <li><input type="text"><p>万円</p></li>
+                        <li>
+                            <select id="input_country_select">
+                                <?php
+                                echo $result['country']
+                                ?>
+                            </select>
+                        </li>
+                        <li>
+                            <select id="input_school_select"></select>
+                        </li>
+                        <li><input type="text" placeholder="コース名"></li>
+                        <li><input type="text" placeholder="日数"></li>
+                        <li><input type="text" placeholder="参考費用"><p>万円</p></li>
                     </ul>
                 </div>
             </div>
             <div class="setting-course-input2">
-                <textarea></textarea>
+                <textarea placeholder="参考を入力してください"></textarea>
                 <button class="button1">削除</button>
                 <button class="button2">追加</button>
             </div>

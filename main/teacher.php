@@ -40,8 +40,7 @@ $ans = $db->allLearned();
         <tr>
             <th>教員番号</th>
             <th>姓名</th>
-            <th>学校名</th>
-            <th>姓　名</th>
+            <th>学校名</th>/
             <th>担当国名</th>
             <th>メール</th>
         </tr>

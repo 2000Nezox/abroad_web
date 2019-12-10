@@ -1,12 +1,18 @@
 <?php
-require_once ('..\class\Controll\account\login\LoginConfirmation.php');
-require_once ('..\class\Controll\account\operation\Teacher\OwnProfileLearning.php');
+require_once('..\class\Controll\account\login\LoginConfirmation.php');
+require_once('..\class\Controll\setting\OwnProfileLearning.php');
+require_once('../class/Utili/CsrfMeasures.php');
 
 session_start();
 LoginConfirmation::Confirmation("login.php");
 
 $db = new OwnProfileLearning();
 $lst = $db->getProfile();
+
+$token = CsrfMeasures::input();
+if(isset($_GET['message'])){
+    print '<script type="text/javascript">alert("' . $_GET['message'] . '");</script>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -19,16 +25,17 @@ $lst = $db->getProfile();
     <link rel="stylesheet" href="../css/setting.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/logout.js"></script>
+    <!--    <script src="../js/SettingTop.js"></script>-->
 </head>
 <body>
-    <?php include('../sharedfile/header.php') ?>
-    <?php include ('../sharedfile/setting_list.php') ?>
-    <div class="top-right">
-        <div class="top-right1">
-            <div class="setting-display">
-                <?php
-                foreach ($lst as $key=>$value){
-                    echo " 
+<?php include('../sharedfile/header.php') ?>
+<?php include('../sharedfile/setting_list.php') ?>
+<div class="top-right">
+    <div class="top-right1">
+        <div class="setting-display">
+            <?php
+            foreach ($lst as $key => $value) {
+                echo " 
                         <dl>
                             <dt>姓名</dt>
                             <dd>$value[0]</dd>
@@ -39,29 +46,31 @@ $lst = $db->getProfile();
                             <dt>担当国名</dt>
                             <dd>$value[3]</dd>
                         </dl>";
-                }
+            }
 
-                ?>
-            </div>
-            <form action="../class/Executionfile/ProfileVerification.php">
-                <div class="setting-input">
-
-                        <dl>
-                            <dt>メールアドレス</dt>
-                            <dd><input type="email"></dd>
-                            <dt>担当国名</dt>
-                            <dd><input type="text"></dd>
-                            <dt>パスワード</dt>
-                            <dd>
-                                <input type="password">
-                                <input type="password">
-                            </dd>
-                        </dl>
-
-                </div>
-                <button>更新</button>
-            </form>
+            ?>
         </div>
+        <form action="../class/Executionfile/ProfileVerification.php" method="post">
+            <div class="setting-input">
+                <dl>
+                    <dt>メールアドレス</dt>
+                    <dd><input type="email" id="mail1" name="mail1"></dd>
+                    <!-- ここはセレクトボックスにする -->
+                    <!-- valueは国番号にする-->
+                    <dt>担当国名</dt>
+                    <!-- 以下はセレクトボックスに変更する必要があります,valueとして国番号を送ってください-->
+                    <dd><input type="text" id="text1" name="text1"></dd>
+                    <dt>パスワード</dt>
+                    <dd>
+                        <input type="password" id="pass1" name="pass1">
+                        <input type="password" id="pass2" name="pass2">
+                    </dd>
+                    <input type="hidden" name="token" value="<?php echo $token ?>">
+                </dl>
+            </div>
+            <button id="form_button">更新</button>
+        </form>
     </div>
+</div>
 </body>
 </html>
