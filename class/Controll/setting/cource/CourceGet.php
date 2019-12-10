@@ -18,15 +18,22 @@ class CourceGet
         //習得したデータを連想配列に纏める
         //配列を返す
 
-        $ans['country'] = $this->db->country_get();
+//        $ans['country'] = $this->db->country_get();
+        $ans['country'] = $this->country_get();
+        $ans['data'] = $this->body_data_all_get();
+        return $ans;
+    }
+
+    /**
+     * @return CourceGetDB
+     */
+    public function country_get()
+    {
         $country = $this->db->country_get();
         foreach ($country as $key=>$value){
             $country_lst[] = "<option value=".$value['country_number'].">".$value['country_name']."</option>";
         }
-
-        $ans['country'] = implode('',$country_lst);
-        $ans['data'] = $this->body_data_all_get();
-        return $ans;
+        return implode('',$country_lst);
     }
 
     public function school_get($key){
