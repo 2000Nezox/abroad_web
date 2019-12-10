@@ -17,7 +17,7 @@ $course = $db ->selectSendCourse();
 <?php
 
 
-$server = "mysql:host=localhost;port=8081;dbname=abroad;charset=utf8";
+$server = "mysql:host=localhost;port=80;dbname=abroad;charset=utf8";
 $userName = "root";
 $password = "password";
 

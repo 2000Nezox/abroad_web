@@ -9,7 +9,7 @@ class LoginConfirmation
             return;
         } else {
             print_r("ログインしていません");
-            header('location: login.php');
+            header('location: index.php');
             exit();
         }
     }

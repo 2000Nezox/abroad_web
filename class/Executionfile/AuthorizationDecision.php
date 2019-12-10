@@ -24,6 +24,6 @@ if($ans){
     header('location:../../main/user.php');
     exit();
 }else{
-    header('location:../../main/login.php');
+    header('location:../../main/index.php');
     exit();
 }
