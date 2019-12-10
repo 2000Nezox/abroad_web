@@ -55,5 +55,13 @@ $(function () {
             )
         }
 
-    })
+    }),
+        $('#button2').submit(function () {
+            if (true){//入力チャック
+
+            }else{
+                alert('dfsdfs');
+                return false;
+            }
+        })
 });

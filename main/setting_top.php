@@ -10,9 +10,9 @@ $db = new OwnProfileLearning();
 $lst = $db->getProfile();
 
 $token = CsrfMeasures::input();
-if(isset($_GET['message'])){
-    print '<script type="text/javascript">alert("' . $_GET['message'] . '");</script>';
-}
+//if(isset($_GET['message'])){
+//    print '<script type="text/javascript">alert("' . $_GET['message'] . '");</script>';
+//}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,7 +25,7 @@ if(isset($_GET['message'])){
     <link rel="stylesheet" href="../css/setting.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/logout.js"></script>
-    <!--    <script src="../js/SettingTop.js"></script>-->
+        <script src="../js/SettingTop.js"></script>
 </head>
 <body>
 <?php include('../sharedfile/header.php') ?>
@@ -55,11 +55,10 @@ if(isset($_GET['message'])){
                 <dl>
                     <dt>メールアドレス</dt>
                     <dd><input type="email" id="mail1" name="mail1"></dd>
-                    <!-- ここはセレクトボックスにする -->
-                    <!-- valueは国番号にする-->
                     <dt>担当国名</dt>
                     <!-- 以下はセレクトボックスに変更する必要があります,valueとして国番号を送ってください-->
                     <dd><input type="text" id="text1" name="text1"></dd>
+                    <!--                    ----->
                     <dt>パスワード</dt>
                     <dd>
                         <input type="password" id="pass1" name="pass1">
@@ -68,7 +67,7 @@ if(isset($_GET['message'])){
                     <input type="hidden" name="token" value="<?php echo $token ?>">
                 </dl>
             </div>
-            <button id="form_button">更新</button>
+            <button type="submit" id="form_button">更新</button>
         </form>
     </div>
 </div>

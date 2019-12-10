@@ -1,8 +1,11 @@
 <?php
     require_once '../class/Controll/setting/cource/CourceGet.php';
+    require_once '../class/Utili/CsrfMeasures.php';
     session_start();
     $ans = new CourceGet();
     $result =  $ans->get();
+
+    $token = CsrfMeasures::input()
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -51,30 +54,33 @@
                 </table>
             </div>
         <div class="setting-course-input">
+            <form id="cource_input" action="../class/Executionfile/NewCourceInput.php" method="post">
             <div class="setting-course-input1">
                 <div>
                     <ul>
                         <li>
-                            <select id="input_country_select">
+                            <select id="input_country_select" name="country">
                                 <?php
                                 echo $result['country']
                                 ?>
                             </select>
                         </li>
                         <li>
-                            <select id="input_school_select"></select>
+                            <select id="input_school_select" name="school" required></select>
                         </li>
-                        <li><input type="text" placeholder="コース名"></li>
-                        <li><input type="text" placeholder="日数"></li>
-                        <li><input type="text" placeholder="参考費用"><p>万円</p></li>
+                        <li><input type="text" name="cource_name" placeholder="コース名" required></li>
+                        <li><input type="number" name="period" placeholder="日数" required></li>
+                        <li><input type="number" name="target_amount" placeholder="参考費用" required><p>万円</p></li>
+                        <input type="hidden" name="token" value="<?php echo $token?>">
                     </ul>
                 </div>
             </div>
             <div class="setting-course-input2">
                 <textarea placeholder="参考を入力してください"></textarea>
-                <button class="button1">削除</button>
-                <button class="button2">追加</button>
+                <button  class="button1" id="button1">削除</button>
+                <button type="submit" class="button2" id="button2">追加</button>
             </div>
+            </form>
         </div>
     </div>
 

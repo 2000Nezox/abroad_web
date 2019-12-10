@@ -1,5 +1,5 @@
 <?php
-
+require_once 'C:\xampp\htdocs\abroad_web\class\Model\setting\cource\CourceInsertDB.php';
 
 class CourceInsert
 {
@@ -7,22 +7,16 @@ class CourceInsert
 
     public function __construct()
     {
-        $this->db = new CourceInsert();
+        $this->db = new CourceInsertDB();
     }
 
-    public function insert(): string
-    {
-        $data = [
-            '' => $_POST[''],
-            '' => $_POST[''],
-            '' => $_POST[''],
-            '' => $_POST[''],
-        ];
-        $ans = $this->db->insert($data);
-        if ($ans) {
-            return '成功しました';
-        } else {
-            return '失敗しました';
-        }
+    public function insert($data): string
+{
+    $ans = $this->db->insert($data);
+    if ($ans) {
+        return '成功しました';
+    } else {
+        return '失敗しました';
     }
+}
 }
