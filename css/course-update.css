@@ -1,13 +1,19 @@
-body{
-    width: 100%;
+html{
+    min-width: 1500px;
+    height:100%;
 }
 
+/*body{*/
+/*    overflow: hidden;*/
+/*    height: 100%;*/
+/*}*/
+
 #header-2{
-    background: rgba(0,102,187,0.1) !important;
+    background: rgba(0,102,187,0.1);
 }
 
 #header-2 a{
-    color: black !important;
+    color: black!important;
 }
 
 .course-input{
@@ -159,9 +165,23 @@ table select {
     background: white;
 }
 
+.button-meibo{
+    position: relative;
+    left: 30%;
+    /*bottom: 5%;*/
+    background: #FCC324;
+    color: white;
+    width: 10em;
+    height: 3em;
+    border-radius: 25px;
+    font-size: 15px;
+    border: none;
+    box-shadow: 1px 2px 3px #555555;
+}
+
 .button-create{
     position: relative;
-    left: 55%;
+    left: 38%;
     /*bottom: 5%;*/
     background: #FCC324;
     color: white;
