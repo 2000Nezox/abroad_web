@@ -68,7 +68,7 @@ try {
 //            var_dump($lineids);
 
 //LINEBOTのアクセストークン
-        $access_token = '1muUjDwGCFFqiagnbDKzeruU9Li168D6E5OzaOG3WbuqPxf6NnaJeICXCxbc6Gag2k7LwB45aHo1xA33fcT1GpeM9BZU8nSS7lLX/RK+u1k9Nk0RB9aqKrIbVi0V0MjbQGdrzk2PMzJT2SCuau/BrgdB04t89/1O/w1cDnyilFU=';
+        $access_token = '6Yj5elLhwp11PkzRQxlh7FDW0JGBQdzxORrU2J5Q8GziIwnqA7o6NkvwcXTcMDZ+Eamt92KMUuLCjIdT0UAryKJPz2o3ykNtn5Q3N4hSEjOPTgT+3XyYmoqyTO4Ath07hQD30+331QooAwH4fNWiaQdB04t89/1O/w1cDnyilFU=';
 
 //LINEBOT送信用
         $url = 'https://api.line.me/v2/bot/message/push';
