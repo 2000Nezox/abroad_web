@@ -20,7 +20,6 @@ if(CsrfMeasures::validation()){
     //ログインしているかどうか判定
     print_r('ログイン画面からの遷移ではありません');
 }
-
 if($ans){
     header('location:../../main/user.php');
     exit();
