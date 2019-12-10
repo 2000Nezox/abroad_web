@@ -1,5 +1,5 @@
 <?php
-require_once 'C:\xampp\htdocs\abroad_web\class\Model\setting\cource\CourceInsertDB.php';
+require_once $_SERVER['DOCUMENT_ROOT'].''.DIRECTORY_SEPARATOR.'abroad_web'.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'setting'.DIRECTORY_SEPARATOR.'cource'.DIRECTORY_SEPARATOR.'CourceInsertDB.php';
 
 class CourceInsert
 {

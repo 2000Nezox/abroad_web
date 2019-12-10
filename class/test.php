@@ -1,10 +1,11 @@
 <?php
-require_once 'Controll/setting/cource/CourceGet.php';
+//require_once 'Controll/setting/cource/CourceGet.php';
+//
+//$ans = new CourceGet();
+//$result =  $ans->school_get(2);
+//var_dump($result);
 
-$ans = new CourceGet();
-$result =  $ans->school_get(2);
-var_dump($result);
-
+echo password_hash('password', PASSWORD_DEFAULT )
 //    require_once ('C:\xampp\htdocs\abroad_web\class\Controll\setting\OwnProfileChange.php');
 //
 ////    require_once ('./Controll/UserListRefine.php');

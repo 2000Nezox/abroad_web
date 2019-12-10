@@ -1,10 +1,8 @@
 <?php
-require_once("../class/Controll/CsrfMeasures.php");
+require_once("../class/Utili/CsrfMeasures.php");
 
 session_start();
-$sessionid = CsrfMeasures::input();
-
-//print_r($sessionid)
+$token = CsrfMeasures::input();
 
 ?>
 <!DOCTYPE html>
@@ -19,11 +17,11 @@ $sessionid = CsrfMeasures::input();
 <diV class="login-form">
     <h1>ASO English +</h1>
     <p>by KUGA Tech</p>
-    <form method="post" action="user.php">
+    <form method="post" action="../class/Executionfile/AuthorizationDecision.php">
         <div class="login-form1">
-            <input class="h" type="text" name="user" value="" placeholder="教職員番号">
-            <input class="h" type="text" name="password" value="" placeholder="パスワード">
-            <input type="hidden" name="token" value="<?php echo $sessionid ?>" >
+            <input class="h" type="number" name="teacher_number" value="" placeholder="教職員番号" required>
+            <input class="h" type="password" name="password" value="" placeholder="パスワード" required>
+            <input type="hidden" name="token" value="<?php echo $token ?>" >
         </div>
             <input id="login" type="submit" name ="check" value = "ログイン">
     </form>

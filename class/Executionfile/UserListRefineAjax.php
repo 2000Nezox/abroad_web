@@ -1,7 +1,7 @@
 <?php
 require_once('../Controll/account/operation/User/UserListRefine.php');
 require_once('../Controll/account/operation/User/UserListAcquisition.php');
-require_once ('../Utili/DBReturnValueConversion.php');
+require_once('../Utili/DBReturnValueConversion.php');
 
 if($_POST['content'] == 'all'){
     $class = new UserListAcquisition();

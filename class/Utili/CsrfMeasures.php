@@ -18,7 +18,6 @@ class CsrfMeasures
             }else{
                 print_r("トークンが一致しません\n");
                 return False;
-
             }
         }else{
             print_r("tokenが送られていません\n");

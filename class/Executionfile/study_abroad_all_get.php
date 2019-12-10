@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\xampp\htdocs\abroad_web\class\Controll\setting\cource\CourceGet.php';
+require_once '../Controll/setting/cource/CourceGet.php';
 
 $class = new CourceGet();
 $ans = $class->body_data_all_get();

@@ -1,29 +1,11 @@
 <?php
-require_once("../class/Utili/CsrfMeasures.php");
+
 require_once("../class/Controll/account/login/LoginConfirmation.php");
-require_once("../class/Controll/account/login/LoginAuthentication.php");
 require_once("../class/Controll/account/operation/User/UserListAcquisition.php");
 require_once('../class/Controll/account/operation/User/UserCategoryLearning.php');
 
 session_start();
-
-//echo $_POST["token"];
-//ログイン画面からの遷移か判定
-if(CsrfMeasures::validation()){
-    //パスワードがあっているか判定をする
-    $login_verification = new LoginAuthentication($_POST["user"],$_POST["password"]);
-    if($login_verification->authentication()){
-        print_r("ログインが完了しました");
-    }else{
-//        print_r("エラーっっｆ");
-        header("Location:".__FILE__."login.php");
-        exit();
-    }
-}else{
-    //ログインしているかどうか判定
-    print_r("ログイン画面からの遷移ではありません");
-    LoginConfirmation::Confirmation("login.php");
-}
+LoginConfirmation::Confirmation();
 
 //ここから読み込みを開始
 $category = new UserCategoryLearning();
@@ -34,8 +16,6 @@ $category_data = json_decode($lst->category_get(),true);
 //データを読み込み
 $db = new UserListAcquisition();
 $ans = $db->allLearned();
-
-
 
 ?>
 <!DOCTYPE html>

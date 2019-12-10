@@ -1,7 +1,6 @@
 <?php
 
 require_once("../class/Controll/account/operation/notification/SendList.php");
-;
 require_once("../class/Controll/account/operation/notification/SendCourse.php");
 require_once("../class/Model/account/notification/NotificationSend.php");
 

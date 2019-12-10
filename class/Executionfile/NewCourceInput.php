@@ -1,8 +1,8 @@
 <?php
-require_once "../Utili/CsrfMeasures.php";
-require_once "../Controll/account/login/LoginConfirmation.php";
-require_once "../Controll/setting/cource/CourceInsert.php";
-require_once "../Controll/account/login/LoginAuthentication.php";
+require_once '../Utili/CsrfMeasures.php';
+require_once '../Controll/account/login/LoginConfirmation.php';
+require_once '../Controll/setting/cource/CourceInsert.php';
+require_once '../Controll/account/login/LoginAuthentication.php';
 
 
 session_start();
@@ -22,6 +22,5 @@ if (CsrfMeasures::validation()) {
         exit;
 } else {
     //ログインしているかどうか判定
-    print_r("ログイン画面からの遷移ではありません");
-    LoginConfirmation::Confirmation("login.php");
+    LoginConfirmation::Confirmation();
 }

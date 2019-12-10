@@ -1,18 +1,15 @@
 <?php
-require_once('..\class\Controll\account\login\LoginConfirmation.php');
-require_once('..\class\Controll\setting\OwnProfileLearning.php');
+require_once('../class/Controll/account/login/LoginConfirmation.php');
+require_once('../class/Controll/setting/OwnProfileLearning.php');
 require_once('../class/Utili/CsrfMeasures.php');
 
 session_start();
-LoginConfirmation::Confirmation("login.php");
+LoginConfirmation::Confirmation();
+$token = CsrfMeasures::input();
 
 $db = new OwnProfileLearning();
 $lst = $db->getProfile();
 
-$token = CsrfMeasures::input();
-//if(isset($_GET['message'])){
-//    print '<script type="text/javascript">alert("' . $_GET['message'] . '");</script>';
-//}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,7 +22,7 @@ $token = CsrfMeasures::input();
     <link rel="stylesheet" href="../css/setting.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/logout.js"></script>
-        <script src="../js/SettingTop.js"></script>
+    <script src="../js/SettingTop.js"></script>
 </head>
 <body>
 <?php include('../sharedfile/header.php') ?>

@@ -25,7 +25,5 @@ if (CsrfMeasures::validation()) {
     exit;
     }
 } else {
-    //ログインしているかどうか判定
-    print_r("ログイン画面からの遷移ではありません");
-    LoginConfirmation::Confirmation("login.php");
+    LoginConfirmation::Confirmation();
 }

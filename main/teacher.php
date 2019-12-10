@@ -4,8 +4,7 @@ require_once ('../class/Controll/account/operation/Teacher/TearcherListAcquisiti
 require_once ('../class/Controll/account/login/LoginConfirmation.php');
 
 session_start();
-
-LoginConfirmation::Confirmation("login.php");
+LoginConfirmation::Confirmation();
 
 //セレクトボックスを読み込み
 $lst = new TeacherCategoryLearning();

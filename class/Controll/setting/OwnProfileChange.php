@@ -1,5 +1,5 @@
 <?php
-require_once 'C:\xampp\htdocs\abroad_web\class\Model\setting\data_update.php';
+require_once $_SERVER['DOCUMENT_ROOT'].''.DIRECTORY_SEPARATOR.'abroad_web'.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'Model'.DIRECTORY_SEPARATOR.'setting'.DIRECTORY_SEPARATOR.'data_update.php';
 //更新を行うクラス
 class OwnProfileChange
 {
