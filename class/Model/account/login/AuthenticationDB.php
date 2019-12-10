@@ -20,6 +20,7 @@ class AuthenticationDB extends ModelBase
         try{
             $sql = sprintf('SELECT * FROM %s where %s = %s', $this->name,$condition,$body);
             $stmt = $this->db->query($sql);
+
             $rows = $stmt->fetchAll();
             return $rows;
         }catch (PDOException $e){
