@@ -77,7 +77,7 @@ body{
     height: 100px;
 }
 
-button{
+#submit-button{
     position: relative;
 /*<<<<<<< HEAD*/
 /*    left: 85%;*/
