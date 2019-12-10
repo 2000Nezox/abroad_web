@@ -1,6 +1,7 @@
 <?php
 
 require_once("../class/Controll/account/operation/notification/SendList.php");
+;
 require_once("../class/Controll/account/operation/notification/SendCourse.php");
 require_once("../class/Model/account/notification/NotificationSend.php");
 
@@ -17,7 +18,7 @@ $course = $db ->selectSendCourse();
 <?php
 
 
-$server = "mysql:host=localhost;port=80;dbname=abroad;charset=utf8";
+$server = "mysql:host=localhost;port=8081;dbname=abroad;charset=utf8";
 $userName = "root";
 $password = "password";
 
@@ -132,8 +133,12 @@ try {
     <script src="../js/jquery_multi/js/jquery.multi-select.js" type="text/javascript"></script>
 
 
-    <script src="../js/notification.js" type="text/javascript"></script>
-
+    <script>
+//       ドロップボックスにチェックボックスを埋め込む処理
+        $(function() {
+            $('#my-select').multiSelect();
+        });
+    </script>
 
 </head>
 <body>
@@ -149,89 +154,57 @@ try {
 <div id="main-content">
     <div id="send-content">
         <div class="course-input-content">
-            <form action="notification.php" method="post" onSubmit="return check()">
-                <div id="send-input">
-                    <dl>
-                        <dt>送信先(右側のリストに入ってるグループに送信する)</dt>
+            <div id="send-input">
+                <dl>
+                    <dt>送信先(右側のリストに入ってるグループに送信する)</dt>
+                    <dd>
+                        <select multiple="multiple" id="my-select" name="my-select[]">
+                            <option value='elem_1'>elem 1</option>
+                            <option value='elem_2'>elem 2</option>
+                            <option value='elem_3'>elem 3</option>
+                            <option value='elem_4'>elem 4</option>
+                        </select>
+                    </dd>
+
+                    <dt>案内講座</dt>
+                    <dd>
+                        <select name="">
+                            <option value="">スポーツ English</option>
+                        </select>
+                    </dd>
+
+                    <div class="content-1">
+                        <dt>講座申込み</dt>
                         <dd>
-                            <select multiple="multiple" id="my-select" name="school_select[]">
-                                <!--    通知先学校選択機能       -->
-                                <?php
-                                foreach ($school as $item){
-                                    ?>
-                                    <option value='<?php echo htmlspecialchars($item['school_number']) ;?>'>
-                                        <?php
-                                        echo htmlspecialchars($item['school_name']);
-                                        ?>
-                                    </option>
-                                    <?php
-                                }
-                                ?>
+                            <select name="">
+                                <option value="">申込済</option>
                             </select>
                         </dd>
 
-                        <dt>案内講座</dt>
+                    <div class="content-1 content-2">
+                        <dt>留学予定</dt>
                         <dd>
-                            <select name="course_select">
-                                    <option value="no_course" selected>講座選択なし</option>
-                                <?php
-                                foreach ($course as $item){
-                                    ?>
-                                    <option value='<?php echo htmlspecialchars($item['course_number']) ;?>'>
-                                        <?php
-                                        echo htmlspecialchars($item['course_name']);
-                                        ?>
-                                    </option>
-                                    <?php
-                                }
-                                ?>
+                            <select name="">
+                                <option value="">予定あり</option>
                             </select>
                         </dd>
 
-<!--                        <div class="content-1">-->
-<!--                            <dt>講座申込み</dt>-->
-<!--                            <dd>-->
-<!--                                <select name="req">-->
-<!--                                    <option value="">申込済</option>-->
-<!--                                    <option value="">未申込</option>-->
-<!--                                </select>-->
-<!--                            </dd>-->
-<!--                        </div>-->
-<!---->
-<!--                        <div class="content-1 content-2">-->
-<!--                            <dt>留学予定</dt>-->
-<!--                            <dd>-->
-<!--                                <select name="sche">-->
-<!--                                    <option value="">予定あり</option>-->
-<!--                                    <option value="">予定なし</option>-->
-<!--                                </select>-->
-<!--                            </dd>-->
-<!--                        </div>-->
+                    <dt>内容</dt>
+                    <dd>
+                        <textarea></textarea>
+                    </dd>
 
-                        <dt>内容</dt>
-                        <dd>
-                            <textarea name="body" placeholder="ここに通知する内容を記載してください"></textarea>
-                        </dd>
+                    <div class="content-1">
+                    <dt>添付画像</dt>
+                    <dd><input type="file"></dd>
+                    </div>
 
-<!--                        <div class="content-1">-->
-<!--                            <dt>添付画像</dt>-->
-<!--                            <dd><input type="file" name="img"></dd>-->
-<!--                        </div>-->
-                            <input type="hidden" name="noti" value="ok">
-                        <div class="content-1">
-                            <input type="submit" value="選択送信" id ='submit-button'>
-                        </div>
-                        <form action="notification.php" method="post" onSubmit="return check2()" >
-                            <div class="content-1">
-                                <input type="hidden" name="noti" value="ok">
-                                <input type="submit" value="全体送信" id ='submit-button'>
-                            </div>
-                        </form>
-                    </dl>
+                    <div class="content-1">
+                        <button>送信</button>
+                    </div>
+                </dl>
 
-                </div>
-            </form>
-
+            </div>
             <div id="send-history">
                 <div class="send-history-title">
                     <table class="table1">
