@@ -62,14 +62,14 @@
                     <dd>
                         <?php
                         $PDO = new pdo('mysql:host=localhost;dbname=abroad;charset=utf8', 'root','password');
-                        $sql = 'select DISTINCT category from course_overview';
+                        $sql = 'select  * from course_category';
                         $category = $PDO->query($sql)
                         ?>
 
                         <select name='category'>
                                 <?php
                                 foreach($category as $items){
-                                    echo "<option value=".$items['category']. ">". $items['category']."</option>";
+                                    echo "<option value=".$items['category_number']. ">". $items['category_name']."</option>";
                                 }
                                 ?>
                         </select>
