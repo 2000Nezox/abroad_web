@@ -105,8 +105,8 @@ if(isset($_POST['noti'])){
 
         }
 
-        echo $id['LINE_ID'];
-        echo "<br/>";
+//        echo $id['LINE_ID'];
+//        echo "<br/>";
 
 
     }
