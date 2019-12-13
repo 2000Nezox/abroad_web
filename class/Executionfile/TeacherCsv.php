@@ -9,8 +9,9 @@ function sampleCsv() {
     try {
         //CSV形式で情報をファイルに出力のための準備
         //@todo ここは/tmp/にしてください
-        $csvFileName = '../../tmp/' . time() . rand() . '.csv';
-        $res = fopen($csvFileName, 'w');
+        $file = touch('../../tmp/' . time() . rand() . '.csv');
+        chmod($file,0606);
+        $res = fopen($file, 'w');
         if ($res === FALSE) {
             throw new Exception('ファイルの書き込みに失敗しました。');
         }
@@ -46,8 +47,8 @@ function sampleCsv() {
         // ここで渡されるファイルがダウンロード時のファイル名になる
         header('Content-Disposition: attachment; filename=sampaleCsv.csv');
         header('Content-Transfer-Encoding: binary');
-        header('Content-Length: ' . filesize($csvFileName));
-        readfile($csvFileName);
+        header('Content-Length: ' . filesize($file));
+        readfile($file);
 
     } catch(Exception $e) {
 
