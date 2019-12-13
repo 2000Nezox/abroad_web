@@ -53,7 +53,7 @@ $lst = $db->getProfile();
                     <dt>メールアドレス</dt>
                     <dd><input type="email" id="mail1" name="mail1"></dd>
                     <dt>担当国名</dt>
-                    <!-- 以下はセレクトボックスに変更する必要があります,valueとして国番号を送ってください-->
+                    <!-- @todo 以下をセレクトボックスに変更してください -->
                     <dd><input type="text" id="text1" name="text1"></dd>
                     <!--                    ----->
                     <dt>パスワード</dt>

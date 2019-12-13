@@ -92,7 +92,9 @@ $ans = $db->allLearned();
     </div>
 
     <div class="button-csv">
+        <form action="../class/Executionfile/TeacherCsv.php" method="get">
         <button>CSV出力</button>
+        </form>
     </div>
 </div>
 

@@ -153,7 +153,9 @@ $ans = $db->allLearned();
     </div>
 
     <div class="button-csv">
-        <button>CSV出力</button>
+        <form action="../class/Executionfile/UserCsv.php" method="get">
+        <button id="csv-download">CSV出力</button>
+        </form>
     </div>
 </div>
 
