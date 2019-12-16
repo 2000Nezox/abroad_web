@@ -181,7 +181,7 @@ table select {
 
 .button-create{
     position: relative;
-    left: 38%;
+    left: 28%;
     /*bottom: 5%;*/
     background: #FCC324;
     color: white;
@@ -192,6 +192,7 @@ table select {
     border: none;
     box-shadow: 1px 2px 3px #555555;
 }
+
 
 .submit_button{
     display       : inline-block;
@@ -206,6 +207,8 @@ table select {
     transition    : .3s;         /* なめらか変化 */
     border        : 2px solid #ffffff;    /* 枠の指定 */
 }
+
+
 .submit_button:hover {
     color         : #ffffff;     /* 背景色     */
     background    : #000000;     /* 文字色     */

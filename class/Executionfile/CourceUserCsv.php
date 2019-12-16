@@ -1,5 +1,5 @@
 <?php
-require_once '../Controll/account/operation/User/UserListAcquisition.php';
+
 session_start();
 
 sampleCsv();
@@ -7,10 +7,11 @@ sampleCsv();
 function sampleCsv() {
 
     try {
+        $cource_number = $_POST['cource_number'];
         //CSV形式で情報をファイルに出力のための準備
 //        $file = touch('../../tmp/' . time() . rand() . '.csv');
         $file = touch('../../tmp/' . time() . rand() . '.csv');
-        var_dump($file);
+//        var_dump($file);
 //        chmod($file,0606);
         $res = fopen($file, 'w');
         if ($res === FALSE) {
@@ -18,15 +19,38 @@ function sampleCsv() {
         }
 
         // データ一覧。この部分を引数とか動的に渡すようにしましょう
-        $class = new UserListAcquisition();
-        $dataList = $class->allLearned();
+        $PDO = new pdo('mysql:host=localhost;dbname=abroad;charset=utf8', 'root','password');
+        $sql = 'SELECT
+    user.student_number,school_name,department_name,name,grade,kanji_sei,kanji_mei,kana_sei,kana_mei,study_abroad_plan
+FROM
+    course_participant
+        INNER JOIN
+        user
+            on course_participant.student_number = user.student_number
+    INNER JOIN
+    affiliation_management
+ON  affiliation_management.affilation_number = user.affiliation_number
+    INNER JOIN
+    school
+    ON  affiliation_management.school_number = school.school_number
+    INNER JOIN
+    department
+    ON  affiliation_management.department_number = department.department_number
+    INNER JOIN
+    teacher
+    ON affiliation_management.responsible_number = teacher.teacher_number
+where course_number = ?;';
+        $sql = $PDO->prepare($sql);
+        $sql->bindValue(1,$cource_number);
+        $sql->execute();
+        $row = $sql->fetchAll();
 
         $lst = ['生徒番号','学校名','学科名','担任名','学年','氏名','カナ','留学予定'];
         mb_convert_variables('SJIS', 'UTF-8', $lst);
 
         // ファイルに書き出しをする
         fputcsv($res, $lst);
-        foreach($dataList as $key=>$value) {
+        foreach($row as $key=>$value) {
             $lst = [];
             $tmp = '';
             foreach ($value as $in_key=>$in_value){

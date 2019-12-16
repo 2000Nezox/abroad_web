@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="../css/course-update.css">
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/header.js"></script>
+    <script>
+        $(function(){
+            $('#cource-user').on('click', function(){
+                var form = $(this).parents('form');
+                form.attr('action', $(this).data('action'));
+                form.submit();
+            });
+        })
+    </script>
     <!--    <script src="../js/ajex.js"></script>-->
 
     <?php
@@ -213,13 +222,10 @@
 
             <input type="hidden" name="course_number" value="<?php echo $_POST['course_number'] ?>">
 
-            <input type='submit' value='参加者名簿' class="button-create" name="print">
+            <button class="button-create" id="cource-user" data-action="attendance_confirmation.php">参加者名簿</button>
+<!--            <input type='submit' value='参加者名簿'  name="print">-->
             <input type='submit' value='更新' class="button-create" name="update">
-
-
         </form>
-
-
     </div>
 
 

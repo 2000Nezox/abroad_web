@@ -32,6 +32,7 @@
                         <dt>講座カテゴリー</dt>
                         <dd>
                             <?php
+
                             $PDO = new pdo('mysql:host=localhost;dbname=abroad;charset=utf8', 'root','password');
                             $sql = 'select DISTINCT category from course_overview';
                             $category = $PDO->query($sql)
