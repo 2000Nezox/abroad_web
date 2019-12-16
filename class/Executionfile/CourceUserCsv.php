@@ -10,7 +10,7 @@ function sampleCsv() {
         $cource_number = $_POST['cource_number'];
         //CSV形式で情報をファイルに出力のための準備
 //        $file = touch('../../tmp/' . time() . rand() . '.csv');
-        $file = touch('../../tmp/' . time() . rand() . '.csv');
+        $file = touch('/tmp/' . time() . rand() . '.csv');
 //        var_dump($file);
 //        chmod($file,0606);
         $res = fopen($file, 'w');
