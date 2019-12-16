@@ -10,7 +10,7 @@ function sampleCsv() {
         //CSV形式で情報をファイルに出力のための準備
         //@todo ここは/tmp/にしてください
 //        $file = touch('../../tmp/' . time() . rand() . '.csv');
-        $file = touch('/tmp/' . time() . rand() . '.csv');
+        $file = touch('/var/tmp/' . time() . rand() . '.csv');
 //        chmod($file,0606);
         $res = fopen($file, 'w');
         if ($res === FALSE) {

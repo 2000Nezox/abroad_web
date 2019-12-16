@@ -9,7 +9,7 @@ function sampleCsv() {
     try {
         //CSV形式で情報をファイルに出力のための準備
 //        $file = touch('../../tmp/' . time() . rand() . '.csv');
-        $file = touch('../../tmp/' . time() . rand() . '.csv');
+        $file = touch('/var/tmp/' . time() . rand() . '.csv');
         var_dump($file);
 //        chmod($file,0606);
         $res = fopen($file, 'w');
