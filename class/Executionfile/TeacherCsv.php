@@ -11,7 +11,7 @@ function sampleCsv() {
         //@todo ここは/tmp/にしてください
 //        $file = touch('../../tmp/' . time() . rand() . '.csv');
         $file = touch('/tmp/' . time() . rand() . '.csv');
-        chmod($file,0606);
+//        chmod($file,0606);
         $res = fopen($file, 'w');
         if ($res === FALSE) {
             throw new Exception('ファイルの書き込みに失敗しました。');
